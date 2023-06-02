@@ -1,4 +1,3 @@
-*郭玉晨**
 
 **H3CNE　H3CSE  H3CTE  RHCE  RHCI**
 
