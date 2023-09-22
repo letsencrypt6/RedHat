@@ -1,0 +1,14 @@
+[BaseOS]
+name=BaseOS
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos-stream/9-stream/BaseOS/x86_64/os/
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-Official
+
+[AppStream]
+name=AppStream
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos-stream/9-stream/AppStream/x86_64/os/
+gpgkey=http://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-Official
+
+[EPEL]
+name=EPEL
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/epel/9/Everything/x86_64/
+gpgkey=https://mirrors.tuna.tsinghua.edu.cn/epel/RPM-GPG-KEY-EPEL-9

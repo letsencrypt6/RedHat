@@ -1,0 +1,75 @@
+#!/bin/bash
+
+REPO_PATH=/mnt/orico
+
+function kiosk_home {
+    if df -h | grep -wq /home; then
+        mv /home/kiosk /mnt
+        umount /home
+        sed -i '/home/d' /etc/fstab
+        lvremove -y /dev/rhel_foundation0/home
+        lvextend -l 100%FREE /dev/rhel_foundation0/root
+        xfs_growfs /
+        mv /mnt/kiosk /home
+    fi
+}
+
+function rht_usb_locale {
+    # Failed to set locale, defaulting to C
+    echo "export LC_ALL=en_US.UTF-8" >> /etc/profile
+    source /etc/profile
+}
+
+function install_fuse {
+    # for mount_orico
+    dnf -y install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    dnf -y install --nogpgcheck \
+        https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm \
+        https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
+    for i in exfat-utils fuse-exfat; do
+    if ! rpm -q $i &>/dev/null; then
+        yum -y install $i
+    fi
+done
+}
+
+function mount_orico {
+    # mount point
+    mkdir $REPO_PATH
+    # fstype
+    install_fuse
+    # mount
+    if blkid | grep -q LABEL.*SuZhen_O; then
+        mount LABEL="SuZhen_O" $REPO_PATH
+    else
+        echo "Please insert usb storage for Orico"
+    fi
+}
+
+function install_icrm {
+    # icrm
+    if ! rpm -q python3-pip &>/dev/null; then
+        yum -y install python3-pip
+    fi
+    pip3 install $REPO_PATH/repository/icrm/cli_login-1.31.1.tar.gz
+    pip3 install $REPO_PATH/repository/icrm/icrm-3.13.tar.gz
+    # ~/.icrm/config.yml
+    icrm help &>/dev/null
+    sed -i "s_:.*_: $REPO_PATH/repository_" ~/.icrm/config.yml
+}
+
+function nic_config {
+    sed -i -e 's/ens160/eth1/' -e '/UUID/d' /etc/sysconfig/network-scripts/ifcfg-ens160
+}
+
+# Main Area
+kiosk_home
+mount_orico
+install_icrm
+# course
+rht-usb list
+rht_usb_locale
+rht-usb copy CL260-RHCS5.0-1.r2021120708-ILT+VT+ROLE+RAV-7-en_US.icmf
+rht-setcourse cl260
+# Starting classroom.
+rht-vmctl start classroom
