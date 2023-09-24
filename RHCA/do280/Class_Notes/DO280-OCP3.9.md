@@ -27,7 +27,7 @@
 
 #### Orientation to the Classroom Lab Environment
 
-![DO280-Classroom-Architecture-1](https://gitee.com/suzhen99/redhat/raw/master/images/DO280-Classroom-Architecture-1.png)
+![DO280-Classroom-Architecture-1](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/DO280-Classroom-Architecture-1.png)
 
 - 课堂计算机
 
@@ -182,7 +182,7 @@ $ LANG=zh_CN.utf8 date
 
 > OpenShift 容器平台是构建于红帽企业 Linux、Docker和 Kubernetes 基础上的一组模块化组件和服务。 OpenShift 为开发人员添加的功能包括远程管理、多租户、安全性增强、应用生命周期管理和自助服务接口。下图演示了 Openshift 软件堆栈：
 
-![OpenShift_Software_Stack](https://gitee.com/suzhen99/redhat/raw/master/images/OpenShift_Software_Stack.png)
+![OpenShift_Software_Stack](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/OpenShift_Software_Stack.png)
 
 <div style="background: #e7f2fa; padding: 12px; line-height: 24px; margin-bottom: 24px; ">
 <dt style="background: #6ab0de; font-weight: bold; display: block; color: #fff; margin: -12px; margin-bottom: -12px; padding: 6px 12px; margin-bottom: 12px;" >注意</dt>
@@ -196,7 +196,7 @@ Kubernetes 已被部署到现实生产环境中，每天管理着超过20亿个 
 >
 > OpenShift 软件堆栈展现了组成 OpenShift 的软件包的一个静态透视图，下图展示了 OpenShift 工作方式的动态视图：
 
-![ose_master_nodes](https://gitee.com/suzhen99/redhat/raw/master/images/ose_master_nodes.png)
+![ose_master_nodes](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/ose_master_nodes.png)
 
 - OpenShift Projects and Applications
 
@@ -896,7 +896,7 @@ openshift_disable_check=disk_availability,docker_storage,memory_availability
 
 - Verifying the Installation
 
-![install-run-login](https://gitee.com/suzhen99/redhat/raw/master/images/install-run-login.png)
+![install-run-login](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/install-run-login.png)
 
 
 
@@ -1477,9 +1477,9 @@ $ oc delete project test
   >
   > master 主控节点不能通过集群网络访问容器
 
-<img src="https://gitee.com/suzhen99/redhat/raw/master/images/kubernetes-pod-sdn.png" width='50%'>
+<img src="https://github.com/letsencrypt6/RedHat/blob/main/RH/images/kubernetes-pod-sdn.png" width='50%'>
 
-<img src='https://gitee.com/suzhen99/redhat/raw/master/images/kubernetes-service-network.png' width=50%>
+<img src='https://github.com/letsencrypt6/RedHat/blob/main/RH/images/kubernetes-service-network.png' width=50%>
 
 - OpenShift Network Topology
 
@@ -1504,7 +1504,7 @@ $ oc delete project test
   >   这种方法需要升级特权才能运行
   >
 
-<img src='https://gitee.com/suzhen99/redhat/raw/master/images/kubernetes-nodeports.png' width=50%>
+<img src='https://github.com/letsencrypt6/RedHat/blob/main/RH/images/kubernetes-nodeports.png' width=50%>
 
 - Accessing External Networks
 
@@ -1730,7 +1730,7 @@ project "test-network" deleted
 
   > 实现从外部 OpenShift 实例到 Pod 的网络访问
 
-<img src='https://gitee.com/suzhen99/redhat/raw/master/images/openshift-routing.png' width=50%>
+<img src='https://github.com/letsencrypt6/RedHat/blob/main/RH/images/openshift-routing.png' width=50%>
 
 - Creating Routes
 
@@ -2327,7 +2327,7 @@ project "network-review" deleted
 
 - Creating Applications Using `oc new-app`
 
-  <img src='https://gitee.com/suzhen99/redhat/raw/master/images/kubernetes-oc-new-app.png' width=50%>
+  <img src='https://github.com/letsencrypt6/RedHat/blob/main/RH/images/kubernetes-oc-new-app.png' width=50%>
 
 
 
@@ -2543,7 +2543,7 @@ $ oc export svc,dc docker-registry > docker-registry.yml
 
   - `oc get events`
 
-  ![ocp-events](https://gitee.com/suzhen99/redhat/raw/master/images/ocp-events.png)
+  ![ocp-events](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/ocp-events.png)
 
   - `oc logs`
   - `oc rsync`
@@ -3360,7 +3360,7 @@ Deleting password for user user2
 
   - Managing Secrets from the Web Console
 
-  ![create-secrets](https://gitee.com/suzhen99/redhat/raw/master/images/create-secrets.png)
+  ![create-secrets](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/create-secrets.png)
 
 - Use Cases for Secrets
 
@@ -3388,7 +3388,7 @@ Deleting password for user user2
   - Managing ConfigMaps from the Web Console
 
 
-![create-configmaps](https://gitee.com/suzhen99/redhat/raw/master/images/create-configmaps.png)
+![create-configmaps](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/create-configmaps.png)
 
 
 
@@ -4658,7 +4658,7 @@ project "scaling" deleted
 
 - Scheduling and Topology
 
-  <img src='https://gitee.com/suzhen99/redhat/raw/master/images/regions-and-zones.png' width=50%>
+  <img src='https://github.com/letsencrypt6/RedHat/blob/main/RH/images/regions-and-zones.png' width=50%>
 
   ```bash
   $ oc label node1.lab.example.com region=us-west zone=power1a --overwrite
@@ -4904,7 +4904,7 @@ project "schedule-control" deleted
   $ oc get templates -n openshift
   ```
   
-  <img src='https://gitee.com/suzhen99/redhat/raw/master/images/ose-templates.png' width=80%>
+  <img src='https://github.com/letsencrypt6/RedHat/blob/main/RH/images/ose-templates.png' width=80%>
   
   
 
@@ -5256,7 +5256,7 @@ project "manage-review" deleted
   >   将时间序列数据存储在非关系分布式数据库中
   >
 
-  <img src='https://gitee.com/suzhen99/redhat/raw/master/images/metrics-architecture.png' width=80%>
+  <img src='https://github.com/letsencrypt6/RedHat/blob/main/RH/images/metrics-architecture.png' width=80%>
 
 - Accessing Heapster and Hawkular
 
@@ -6165,13 +6165,13 @@ project "resources" deleted
 
 - Using the Web Console to Manage Probes
 
-![ocp-web-console-dc-probes](https://gitee.com/suzhen99/redhat/raw/master/images/ocp-web-console-dc-probes.png)
+![ocp-web-console-dc-probes](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/ocp-web-console-dc-probes.png)
 
-![ocp-web-console-dc-define-readiness-probe](https://gitee.com/suzhen99/redhat/raw/master/images/ocp-web-console-dc-define-readiness-probe.png)
+![ocp-web-console-dc-define-readiness-probe](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/ocp-web-console-dc-define-readiness-probe.png)
 
-![ocp-web-console-dc-define-liveness-probe](https://gitee.com/suzhen99/redhat/raw/master/images/ocp-web-console-dc-define-liveness-probe.png)
+![ocp-web-console-dc-define-liveness-probe](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/ocp-web-console-dc-define-liveness-probe.png)
 
-![ocp-web-console-dc-edit-probes](https://gitee.com/suzhen99/redhat/raw/master/images/ocp-web-console-dc-edit-probes.png)
+![ocp-web-console-dc-edit-probes](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/ocp-web-console-dc-edit-probes.png)
 
 
 
@@ -6765,7 +6765,7 @@ project "load-review" deleted
 
 #### A5. 容器和操作系统对比
 
-> ![container_vs_os](https://gitee.com/suzhen99/redhat/raw/master/images/container_vs_os.png)
+> ![container_vs_os](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/container_vs_os.png)
 
 #### A6. RHCA
 
