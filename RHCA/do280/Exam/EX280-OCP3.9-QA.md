@@ -1,6 +1,6 @@
 - 课堂计算机
 
-![DO280-Classroom-Architecture-1](https://gitee.com/suzhen99/redhat/raw/master/images/DO280-Classroom-Architecture-1.png)
+![DO280-Classroom-Architecture-1](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/DO280-Classroom-Architecture-1.png)
 
 |  SOFT  |            计算机名称             |            IP 地址             |                 角色                  |
 | :----: | :-------------------------------: | :----------------------------: | :-----------------------------------: |
@@ -158,7 +158,7 @@ You don\'t have any projects. Contact your system administrator to request a pro
 > 		Password	**redhat**
 > 		<kbd>Login in</kbd>
 
-![image-20210905192423138](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905192423138.png)
+![image-20210905192423138](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905192423138.png)
 
 
 
@@ -175,7 +175,7 @@ You don\'t have any projects. Contact your system administrator to request a pro
 
 > **firefox** http://materials/storage
 
-![image-20210905192622575](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905192622575.png)
+![image-20210905192622575](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905192622575.png)
 
 **[root@master]**
 
@@ -537,7 +537,7 @@ exam280
 
 > **firefox** http://materials/wordpress/
 
-![image-20210905202535360](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905202535360.png)
+![image-20210905202535360](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905202535360.png)
 
 **[root@master]**
 
@@ -930,13 +930,13 @@ wpfrontend `blog.apps.lab.example.com`        wpfrontend   `80`                 
 >   ​		Your Email	**ayumi@master.lab.example.com**
 >   ​		<kbd>Install WordPress</kbd>
 
-![image-20210905003745553](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905003745553.png)
+![image-20210905003745553](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905003745553.png)
 
 > - **Success!**
 >   ​		<kbd>Log In</kbd>
 >
 
-![image-20210905003936089](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905003936089.png)
+![image-20210905003936089](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905003936089.png)
 
 > - **Login**
 >   ​		Username or Email address. **ayumi**
@@ -944,7 +944,7 @@ wpfrontend `blog.apps.lab.example.com`        wpfrontend   `80`                 
 >     	<kbd>Log In</kbd>
 > 
 
-![image-20210905004032924](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905004032924.png)
+![image-20210905004032924](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905004032924.png)
 
 > - **Dashboard**
 >
@@ -957,13 +957,13 @@ wpfrontend `blog.apps.lab.example.com`        wpfrontend   `80`                 
 >
 >   ​		[View post]()
 
-![image-20210905004304831](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905004304831.png)
+![image-20210905004304831](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905004304831.png)
 
-![image-20211011164526633](https://gitee.com/suzhen99/redhat/raw/master/images/image-20211011164526633.png)
+![image-20211011164526633](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20211011164526633.png)
 
-![image-20211011164548850](https://gitee.com/suzhen99/redhat/raw/master/images/image-20211011164548850.png)
+![image-20211011164548850](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20211011164548850.png)
 
-![image-20211011164601976](https://gitee.com/suzhen99/redhat/raw/master/images/image-20211011164601976.png)
+![image-20211011164601976](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20211011164601976.png)
 
 
 
@@ -1218,7 +1218,7 @@ Container   cpu       10m  500m   100m             500m           -
 
 > **firefox** http://materials/gogs
 
-![image-20210905205748579](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905205748579.png)
+![image-20210905205748579](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905205748579.png)
 
 **[root@master]**
 
@@ -1351,16 +1351,16 @@ gogs-postgresql-1-wg8n2  1/1   `Running`  0         1m
 >         <kbd>Create New Account</kbd>
 >
 
-![image-20210905211126269](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905211126269.png)
+![image-20210905211126269](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905211126269.png)
 
-![image-20210905211238779](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905211238779.png)
+![image-20210905211238779](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905211238779.png)
 
 > - **Sign in**
 >   	Username or email **salvo**
 >      				Password **redhat**
 >      				<kbd>Sign In</kbd> 
 
-![image-20210905211335094](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905211335094.png)
+![image-20210905211335094](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905211335094.png)
 
 > - **Dashboard**
 >   	<kbd>My Repositories **+**</kbd>
@@ -1368,15 +1368,15 @@ gogs-postgresql-1-wg8n2  1/1   `Running`  0         1m
 > ​						"Repositories name"  **ex280**
 > ​						<kbd>Create Repository</kbd>
 
-![image-20210905211427620](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905211427620.png)
+![image-20210905211427620](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905211427620.png)
 
-![image-20210905211532852](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905211532852.png)
+![image-20210905211532852](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905211532852.png)
 
 > - **"salvo/ex280"**
 >
 > ​				HTTP "http://gogs.apps.lab.example.com/salvo/ex280.git"
 
-![image-20210905211607738](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905211607738.png)
+![image-20210905211607738](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905211607738.png)
 
 **步骤6. 创建README.md**
 
@@ -1417,7 +1417,7 @@ To http://gogs.apps.lab.example.com/salvo/ex280.git
 
 > [ex280](http://gogs.apps.lab.example.com/salvo/ex280)
 
-![image-20211012102612613](https://gitee.com/suzhen99/redhat/raw/master/images/image-20211012102612613.png)
+![image-20211012102612613](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20211012102612613.png)
 
 
 
@@ -1594,26 +1594,26 @@ hawkular-metrics  `hawkular-metrics.apps.lab.example.com` ...
 
 > **firefox** https://hawkular-metrics.apps.lab.example.com
 
-![image-20210904225138366](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210904225138366.png)
+![image-20210904225138366](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210904225138366.png)
 
 > **firefox**	https://master.lab.example.com
 > 		Username	**salvo**
 > 		Password	**redhat**
 > 		<kbd>Login in</kbd>
 
-![image-20210905192423138](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905192423138.png)
+![image-20210905192423138](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905192423138.png)
 
 > <kbd>ditto</kbd> /
 > 			<kbd>Applications</kbd>/ <kbd>pods</kbd> /
 > 					<kbd>gogs</kbd> /
 > 							 <kbd>Metrics</kbd>
 
-![image-20210905220827162](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905220827162.png)
+![image-20210905220827162](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905220827162.png)
 
-![image-20210905221238630](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905221238630.png)
+![image-20210905221238630](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905221238630.png)
 
-![image-20210905221333299](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905221333299.png)
+![image-20210905221333299](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905221333299.png)
 
-![image-20210905221433600](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905221433600.png)
+![image-20210905221433600](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905221433600.png)
 
-![image-20210905221519289](https://gitee.com/suzhen99/redhat/raw/master/images/image-20210905221519289.png)
+![image-20210905221519289](https://github.com/letsencrypt6/RedHat/blob/main/RH/images/image-20210905221519289.png)
