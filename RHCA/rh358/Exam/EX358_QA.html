@@ -1,0 +1,1973 @@
+<!DOCTYPE html><html><head>
+      <title>EX358_QA</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\yiyi\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#&#x91CD;&#x8981;&#x914D;&#x7F6E;&#x4FE1;&#x606F;" class="md-toc-link"><p>&#x91CD;&#x8981;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;" class="md-toc-link">
+            <p>&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#&#x5E10;&#x6237;&#x4FE1;&#x606F;" class="md-toc-link">
+            <p>&#x5E10;&#x6237;&#x4FE1;&#x606F;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#&#x5176;&#x4ED6;&#x4FE1;&#x606F;" class="md-toc-link">
+            <p>&#x5176;&#x4ED6;&#x4FE1;&#x606F;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;" class="md-toc-link">
+            <p>&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#&#x91CD;&#x8981;&#x8BC4;&#x6D4B;&#x4FE1;&#x606F;" class="md-toc-link">
+            <p>&#x91CD;&#x8981;&#x8BC4;&#x6D4B;&#x4FE1;&#x606F;</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#&#x8003;&#x8BD5;&#x8981;&#x6C42;" class="md-toc-link"><p>&#x8003;&#x8BD5;&#x8981;&#x6C42;</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1-&#x914D;&#x7F6E;ipv6&#x5730;&#x5740;-chapter1" class="md-toc-link">
+            <ol>
+<li>&#x914D;&#x7F6E;IPV6&#x5730;&#x5740;-Chapter1</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2-&#x914D;&#x7F6E;dhcp&#x670D;&#x52A1;&#x5668;-chapter4" class="md-toc-link">
+            <ol start="2">
+<li>&#x914D;&#x7F6E;dhcp&#x670D;&#x52A1;&#x5668;-Chapter4</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3-&#x914D;&#x7F6E;&#x9632;&#x706B;&#x5899;" class="md-toc-link">
+            <ol start="3">
+<li>&#x914D;&#x7F6E;&#x9632;&#x706B;&#x5899;</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#4-&#x5B8C;&#x6210;&#x4E3B;dns&#x914D;&#x7F6E;-chapter3" class="md-toc-link">
+            <ol start="4">
+<li>&#x5B8C;&#x6210;&#x4E3B;DNS&#x914D;&#x7F6E;-Chapter3</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#5-&#x901A;&#x8FC7;smb&#x5171;&#x4EAB;&#x76EE;&#x5F55;-chapter10" class="md-toc-link">
+            <ol start="5">
+<li>&#x901A;&#x8FC7;SMB&#x5171;&#x4EAB;&#x76EE;&#x5F55;-Chapter10</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#6-samba-&#x591A;&#x7528;&#x6237;-chapter10" class="md-toc-link">
+            <ol start="6">
+<li>Samba &#x591A;&#x7528;&#x6237;-Chapter10</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#7-&#x914D;&#x7F6E;nfs&#x670D;&#x52A1;-chapter10" class="md-toc-link">
+            <ol start="7">
+<li>&#x914D;&#x7F6E;NFS&#x670D;&#x52A1;-Chapter10</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#8-&#x6302;&#x8F7D;&#x4E00;&#x4E2A;nfs&#x5171;&#x4EAB;-chapter10" class="md-toc-link">
+            <ol start="8">
+<li>&#x6302;&#x8F7D;&#x4E00;&#x4E2A;NFS&#x5171;&#x4EAB;-Chapter10</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#9-&#x914D;&#x7F6E;iscsi&#x670D;&#x52A1;&#x7AEF;-chapter-11" class="md-toc-link">
+            <ol start="9">
+<li>&#x914D;&#x7F6E;iSCSI&#x670D;&#x52A1;&#x7AEF;-Chapter 11</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#10-&#x914D;&#x7F6E;iscsi&#x7684;&#x5BA2;&#x6237;&#x7AEF;-chapter-11" class="md-toc-link">
+            <ol start="10">
+<li>&#x914D;&#x7F6E;iSCSI&#x7684;&#x5BA2;&#x6237;&#x7AEF;-Chapter 11</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#11-&#x642D;&#x5EFA;mariadb-chapter-7" class="md-toc-link">
+            <ol start="11">
+<li>&#x642D;&#x5EFA;MariaDB-Chapter 7</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x586B;&#x7A7A;1-chapter7" class="md-toc-link">
+            <ol start="12">
+<li>&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x586B;&#x7A7A;1-Chapter7</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#13-&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x586B;&#x7A7A;2-chapter7" class="md-toc-link">
+            <ol start="13">
+<li>&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x586B;&#x7A7A;2-Chapter7</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#14-&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;web&#x670D;&#x52A1;&#x5668;-chapter9" class="md-toc-link">
+            <ol start="14">
+<li>&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;web&#x670D;&#x52A1;&#x5668;-Chapter9</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#15-&#x914D;&#x7F6E;&#x5B89;&#x5168;web&#x670D;&#x52A1;-chapter8" class="md-toc-link">
+            <ol start="15">
+<li>&#x914D;&#x7F6E;&#x5B89;&#x5168;web&#x670D;&#x52A1;-Chapter8</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#16-&#x914D;&#x7F6E;&#x865A;&#x62DF;&#x4E3B;&#x673A;-chapter8" class="md-toc-link">
+            <ol start="16">
+<li>&#x914D;&#x7F6E;&#x865A;&#x62DF;&#x4E3B;&#x673A;-Chapter8</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#17-&#x914D;&#x7F6E;web&#x5185;&#x5BB9;&#x7684;&#x8BBF;&#x95EE;-chapter8" class="md-toc-link">
+            <ol start="17">
+<li>&#x914D;&#x7F6E;web&#x5185;&#x5BB9;&#x7684;&#x8BBF;&#x95EE;-Chapter8</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#18-&#x901A;&#x8FC7;-ansible-&#x5E03;&#x7F72;-nginx---chapter8" class="md-toc-link">
+            <ol start="18">
+<li>&#x901A;&#x8FC7; ansible &#x5E03;&#x7F72; Nginx - Chapter8</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#19-&#x901A;&#x8FC7;-ansible-&#x914D;&#x7F6E;-firewall" class="md-toc-link">
+            <ol start="19">
+<li>&#x901A;&#x8FC7; ansible &#x914D;&#x7F6E; firewall</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#20-&#x901A;&#x8FC7;-ansible-&#x914D;&#x7F6E;&#x7A7A;&#x90AE;&#x4EF6;&#x5BA2;&#x6237;&#x7AEF;anisble---chapter6" class="md-toc-link">
+            <ol start="20">
+<li>&#x901A;&#x8FC7; ansible &#x914D;&#x7F6E;&#x7A7A;&#x90AE;&#x4EF6;&#x5BA2;&#x6237;&#x7AEF;(anisble) - Chapter6</li>
+</ol>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#21-&#x901A;&#x8FC7;-ansible-&#x5E03;&#x7F72;&#x6253;&#x5370;&#x673A;-chapter5" class="md-toc-link">
+            <ol start="21">
+<li>&#x901A;&#x8FC7; ansible &#x5E03;&#x7F72;&#x6253;&#x5370;&#x673A;-Chapter5</li>
+</ol>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#appendences" class="md-toc-link"><p>APPENDENCES</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a1-&#x7EA2;&#x5E3D;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x548C;&#x81EA;&#x52A8;&#x5316;&#x4E13;&#x5BB6;&#x8003;&#x8BD5;httpswwwredhatcomzhservicestrainingex358-red-hat-certified-specialist-services-management-automation-exam" class="md-toc-link">
+            </a><p><a href="#a1-&#x7EA2;&#x5E3D;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x548C;&#x81EA;&#x52A8;&#x5316;&#x4E13;&#x5BB6;&#x8003;&#x8BD5;httpswwwredhatcomzhservicestrainingex358-red-hat-certified-specialist-services-management-automation-exam" class="md-toc-link">A1. </a><a href="https://www.redhat.com/zh/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam">&#x7EA2;&#x5E3D;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x548C;&#x81EA;&#x52A8;&#x5316;&#x4E13;&#x5BB6;&#x8003;&#x8BD5;</a></p>
+
+          </div>
+        </div>
+      </details>
+    
+</div>
+<h1 class="mume-header" id="%E9%87%8D%E8%A6%81%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF">&#x91CD;&#x8981;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</h1>
+
+<p>&#x5728;&#x8003;&#x8BD5;&#x671F;&#x95F4;&#xFF0C;&#x9664;&#x4E86;&#x60A8;&#x5C31;&#x5750;&#x4F4D;&#x7F6E;&#x7684;&#x53F0;&#x5F0F;&#x673A;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x5C06;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x3002;&#x60A8;&#x4E0D;&#x5177;&#x6709;&#x53F0;&#x5F0F;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6839;&#x8BBF;&#x95EE;&#x6743;&#xFF0C;&#x4F46;&#x5177;&#x6709;&#x5BF9;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x7684;&#x5B8C;&#x5168; root &#x8BBF;&#x95EE;&#x6743;&#x3002;</p>
+<h2 class="mume-header" id="%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF">&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x7CFB;&#x7EDF;</th>
+<th style="text-align:center">IP&#x5730;&#x5740;</th>
+<th style="text-align:center">&#x89D2;&#x8272;</th>
+<th style="text-align:center">LAN1</th>
+<th style="text-align:center">LAN2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">workstation</td>
+<td style="text-align:center">172.25.250.9</td>
+<td style="text-align:center">ansible &#x63A7;&#x5236;&#x8282;&#x70B9;</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">bastion</td>
+<td style="text-align:center">172.25.250.254</td>
+<td style="text-align:center">&#x7F51;&#x5173;</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">servera</td>
+<td style="text-align:center">172.25.250.10</td>
+<td style="text-align:center">CMD - server</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">serverb</td>
+<td style="text-align:center">172.25.250.11</td>
+<td style="text-align:center">CMD - client</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">serverc</td>
+<td style="text-align:center">172.25.250.12</td>
+<td style="text-align:center">ansbile &#x6258;&#x7BA1;&#x8282;&#x70B9;</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">serverd</td>
+<td style="text-align:center">172.25.250.13</td>
+<td style="text-align:center">ansible &#x6258;&#x7BA1;&#x8282;&#x70B9;</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">servere</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">dhcp client</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Y</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x7684;IP&#x5730;&#x5740;&#x91C7;&#x7528;&#x9759;&#x6001;&#x8BBE;&#x7F6E;&#x3002;&#x8BF7;&#x52FF;&#x66F4;&#x6539;&#x8FD9;&#x4E9B;&#x8BBE;&#x7F6E;&#x3002;&#x4E3B;&#x673A;&#x540D;&#x79F0;&#x89E3;&#x6790;&#x5DF2;&#x914D;&#x7F6E;&#x4E3A;&#x89E3;&#x6790;&#x4E0A;&#x65B9;&#x5217;&#x51FA;&#x7684;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x89E3;&#x6790;&#x4E3B;&#x673A;&#x77ED;&#x540D;&#x79F0;&#x3002;</p>
+<h2 class="mume-header" id="%E5%B8%90%E6%88%B7%E4%BF%A1%E6%81%AF">&#x5E10;&#x6237;&#x4FE1;&#x606F;</h2>
+
+<ul>
+<li>&#x6240;&#x6709;&#x7CFB;&#x7EDF;&#x7684;root&#x5BC6;&#x7801;&#x662F;<code>redhat</code>&#x3002;&#x8BF7;&#x52FF;&#x66F4;&#x6539;root&#x5BC6;&#x7801;</li>
+<li>&#x9664;&#x975E;&#x53E6;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x5426;&#x5219;&#x8FD9;&#x5C06;&#x662F;&#x7528;&#x4E8E;&#x8BBF;&#x95EE;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x548C;&#x670D;&#x52A1;&#x7684;&#x5BC6;&#x7801;&#x3002;</li>
+<li>&#x9664;&#x975E;&#x53E6;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x5426;&#x5219;&#x6B64;&#x5BC6;&#x7801;&#x4E5F;&#x5E94;&#x7528;&#x4E8E;&#x60A8;&#x521B;&#x5EFA;&#x7684;&#x6240;&#x6709;&#x5E10;&#x6237;&#x6216;&#x8005;&#x4EFB;&#x4F55;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;&#x7684;&#x670D;&#x52A1;&#x3002;</li>
+<li>&#x4E3A;&#x65B9;&#x4FBF;&#x8D77;&#x89C1;&#xFF0C;&#x6240;&#x6709;&#x7CFB;&#x7EDF;&#x4E0A;&#x5DF2;&#x9884;&#x88C5;&#x4E86;SSH&#x5BC6;&#x94A5;&#xFF0C;&#x5141;&#x8BB8;&#x5728;&#x4E0D;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x901A;&#x8FC7;SSH&#x8FDB;&#x884C;root&#x8BBF;&#x95EE;&#x3002;&#x8BF7;&#x52FF;&#x5BF9;&#x7CFB;&#x7EDF;&#x4E0A;&#x7684;root SSH&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x3002;</li>
+<li>**Ansible&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4E0A;&#x5DF2;&#x521B;&#x5EFA;&#x4E86;&#x7528;&#x6237;&#x5E10;&#x6237;<code>student</code> &#x3002;**&#x6B64;&#x5E10;&#x6237;&#x9884;&#x88C5;&#x4E86;SSH&#x5BC6;&#x94A5;&#xFF0C;&#x5141;&#x8BB8;&#x5728;Ansible&#x63A7;&#x5236;&#x8282;&#x70B9;&#x548C;&#x5404;&#x4E2A;Ansible&#x53D7;&#x7BA1;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;SSH&#x767B;&#x5F55;&#x3002;&#x8BF7;&#x52FF;&#x5BF9;&#x7CFB;&#x7EDF;&#x4E0A;&#x7684;student SSH&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4ECE;root&#x5E10;&#x6237;&#x4F7F;&#x7528;su&#x8BBF;&#x95EE;&#x6B64;&#x7528;&#x6237;&#x5E10;&#x6237;&#x3002;</li>
+</ul>
+<h2 class="mume-header" id="%E5%85%B6%E4%BB%96%E4%BF%A1%E6%81%AF">&#x5176;&#x4ED6;&#x4FE1;&#x606F;</h2>
+
+<ul>
+<li>&#x4E00;&#x4E9B;&#x8003;&#x8BD5;&#x9879;&#x76EE;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4FEE;&#x6539;Ansible&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x3002;&#x60A8;&#x8981;&#x8D1F;&#x8D23;&#x786E;&#x4FDD;&#x6240;&#x6709;&#x4EE5;&#x524D;&#x7684;&#x6E05;&#x5355;&#x7EC4;&#x548C;&#x9879;&#x76EE;&#x4FDD;&#x7559;&#x4E0B;&#x6765;&#xFF0C;&#x4E0E;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x66F4;&#x6539;&#x5171;&#x5B58;&#x3002;&#x60A8;&#x8FD8;&#x8981;&#x6709;&#x786E;&#x4FDD;&#x6E05;&#x5355;&#x4E2D;&#x6240;&#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x7EC4;&#x548C;&#x4E3B;&#x673A;&#x4FDD;&#x7559;&#x60A8;&#x8FDB;&#x884C;&#x7684;&#x4EFB;&#x4F55;&#x66F4;&#x6539;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x8282;&#x70B9;&#xFF0C;yum&#x5B58;&#x50A8;&#x5E93;&#x5DF2;&#x6B63;&#x786E;&#x914D;&#x7F6E;&#x3002;</li>
+<li>&#x4E00;&#x4E9B;&#x9879;&#x76EE;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5DF2;&#x5728;&#x4EE5;&#x4E0B;&#x4F4D;&#x7F6E;&#x63D0;&#x4F9B;&#xFF1A;<a href="http://materials.example.com/classroom/ansible/">http://materials.example.com/classroom/ansible/</a></li>
+<li>&#x4EA7;&#x54C1;&#x6587;&#x6863;&#x53EF;&#x4ECE;&#x4EE5;&#x4E0B;&#x4F4D;&#x7F6E;&#x627E;&#x5230;&#xFF1A;<a href="https://docs.ansible.com/ansible/2.9/">https://docs.ansible.com/ansible/2.9/</a></li>
+<li>&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E5F;&#x8FDB;&#x884C;&#x4E86;&#x914D;&#x7F6E;&#xFF0C;&#x4F9B;&#x60A8;&#x5728;&#x8003;&#x8BD5;&#x671F;&#x95F4;&#x4F7F;&#x7528;&#x3002;&#x5173;&#x4E8E;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x7684;&#x5177;&#x4F53;&#x4FE1;&#x606F;&#x5C06;&#x5728;&#x9700;&#x8981;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x63D0;&#x4F9B;&#x3002;</li>
+</ul>
+<h2 class="mume-header" id="%E8%99%9A%E6%8B%9F%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86">&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;</h2>
+
+<p>&#x8003;&#x8BD5;&#x671F;&#x95F4;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x5173;&#x95ED;&#x6216;&#x91CD;&#x65B0;&#x5F15;&#x5BFC;&#x865A;&#x62DF;&#x673A;&#x7CFB;&#x7EDF;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4ECE;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x672C;&#x8EAB;&#x8FDB;&#x884C;&#x8FD9;&#x9879;&#x64CD;&#x4F5C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;&#x7269;&#x7406;&#x7CFB;&#x7EDF;&#x63A7;&#x5236;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x3002;&#x8981;&#x4ECE;&#x7269;&#x7406;&#x7CFB;&#x7EDF;&#x8BBF;&#x95EE;&#x6216;&#x63A7;&#x5236;&#x8003;&#x8BD5;&#x7CFB;&#x7EDF;&#xFF0C;&#x5355;&#x51FB;&#x684C;&#x9762;&#x4E0A;VM&#x63A7;&#x5236;&#x53F0;&#x56FE;&#x6807;&#x3002;&#x8FD9;&#x4F1A;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x8868;&#x683C;&#xFF0C;&#x5305;&#x542B;&#x6BCF;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x5BF9;&#x5E94;&#x6309;&#x94AE;&#xFF0C;&#x5355;&#x51FB;&#x7279;&#x5B9A;&#x865A;&#x62DF;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6309;&#x94AE;&#x5C06;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x83DC;&#x5355;&#xFF0C;&#x5305;&#x542B;&#x7528;&#x6765;&#x63A7;&#x5236;&#x8BE5;&#x7CFB;&#x7EDF;&#x9009;&#x9879;&#xFF1A;</p>
+<ul>
+<li>&#x542F;&#x52A8;&#x8282;&#x70B9;&#x70B9;VM-&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x672A;&#x5728;&#x8FD0;&#x884C;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x5C06;&#x542F;&#x52A8;&#x6307;&#x5B9A;&#x7CFB;&#x7EDF;&#x3002;&#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5728;&#x8FD0;&#x884C;-&#x5219;&#x8BE5;&#x9009;&#x9879;&#x65E0;&#x4EFB;&#x4F55;&#x4F5C;&#x7528;&#x3002;</li>
+<li>&#x91CD;&#x65B0;&#x5F15;&#x5BFC;&#x8282;&#x70B9;VM-&#x6B63;&#x5E38;&#x5173;&#x95ED;&#x8003;&#x8BD5;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x542F;&#x3002;</li>
+<li>&#x5173;&#x95ED;&#x8282;&#x70B9;VM-&#x6B63;&#x5E38;&#x5173;&#x95ED;&#x6307;&#x5B9A;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>&#x5173;&#x95ED;&#x8282;&#x70B9;VM&#x7535;&#x6E90;-&#x7ACB;&#x5373;&#x5173;&#x95ED;&#x6307;&#x5B9A;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>VM&#x63A7;&#x5236;&#x53F0;&#x8282;&#x70B9;-&#x8FD9;&#x5C06;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;&#x5230;&#x6307;&#x5B9A;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x7684;&#x63A7;&#x5236;&#x53F0;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x5C06;&#x7126;&#x70B9;&#x79FB;&#x52A8;&#x5230;&#x6B64;&#x7A97;&#x53E3;&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#x5C06;&#x6293;&#x4F4F;&#x60A8;&#x7684;&#x9F20;&#x6807;&#x3002;&#x8981;&#x6062;&#x590D;&#x9F20;&#x6807;&#xFF0C;&#x540C;&#x65F6;&#x952E;&#x5165;Ctrl+Alt&#x3002;</li>
+<li>&#x91CD;&#x5EFA;&#x8282;&#x70B9;VM-&#x5C06;&#x5F53;&#x524D;VM&#x8FD8;&#x539F;&#x4E3A;&#x539F;&#x59CB;&#x72B6;&#x6001;&#x3002;&#x7CFB;&#x7EDF;&#x5C06;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x8981;&#x6C42;&#x60A8;&#x786E;&#x8BA4;&#x64CD;&#x4F5C;&#x3002;&#x8B66;&#x544A;&#xFF01;&#xFF01;&#xFF01;&#x60A8;&#x5728;VM&#x4E0A;&#x5B8C;&#x6210;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x5C06;&#x4E22;&#x5931;&#x3002;&#x4EC5;&#x5F53;&#x7CFB;&#x7EDF;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x65F6;&#x624D;&#x5E94;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x4E4B;&#x524D;&#xFF0C;&#x786E;&#x4FDD;&#x5173;&#x95ED;VM&#x3002;</li>
+</ul>
+<h2 class="mume-header" id="%E9%87%8D%E8%A6%81%E8%AF%84%E6%B5%8B%E4%BF%A1%E6%81%AF">&#x91CD;&#x8981;&#x8BC4;&#x6D4B;&#x4FE1;&#x606F;</h2>
+
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x8BC4;&#x5206;&#x4E4B;&#x524D;&#xFF0C;&#x60A8;&#x7684; Ansible &#x6258;&#x7BA1;&#x8282;&#x70B9;&#x7CFB;&#x7EDF; &#x5C06;&#x91CD;&#x7F6E;&#x4E3A;&#x8003;&#x8BD5;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x521D;&#x59CB;&#x72B6;&#x6001;&#xFF0C;&#x60A8;&#x7F16;&#x5199;&#x7684; Ansible playbook &#x5C06;&#x901A;&#x8FC7;&#x4EE5; <strong>student</strong> &#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x5728;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4E0A;&#x8FD0;&#x884C;&#x6765;&#x52A0;&#x4EE5;&#x5E94;&#x7528;&#x3002;&#x5728; playbook &#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x60A8;&#x7684;&#x6258;&#x7BA1;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x8BC4;&#x4F30;&#xFF0C;&#x4EE5;&#x5224;&#x65AD;&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x6309;&#x7167;&#x89C4;&#x5B9A;&#x8FDB;&#x884C;&#x4E86;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x8BC4;&#x5206;&#x4E4B;&#x524D;&#xFF0C;&#x60A8;&#x7684; Ansible &#x6258;&#x7BA1;&#x8282;&#x70B9;&#x7CFB;&#x7EDF; &#x5C06;&#x91CD;&#x7F6E;&#x4E3A;&#x8003;&#x8BD5;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x521D;&#x59CB;&#x72B6;&#x6001;&#xFF0C;&#x60A8;&#x521B;&#x5EFA;&#x7684; Ansible Tower  &#x4F5C;&#x4E1A;&#x5C06;&#x901A;&#x8FC7;&#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x8FD0;&#x884C;&#x6765;&#x52A0;&#x4EE5;&#x5E94;&#x7528;&#x3002;&#x5728;&#x4F5C;&#x4E1A;&#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x91CD;&#x65B0;&#x542F;&#x52A8; Ansible Tower  &#x6258;&#x7BA1;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x8BC4;&#x4F30;&#xFF0C;&#x4EE5;&#x5224;&#x65AD;&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x6309;&#x7167;&#x89C4;&#x5B9A;&#x8FDB;&#x884C;&#x4E86;&#x914D;&#x7F6E;&#x3002;</p>
+<h1 class="mume-header" id="%E8%80%83%E8%AF%95%E8%A6%81%E6%B1%82">&#x8003;&#x8BD5;&#x8981;&#x6C42;</h1>
+
+<h2 class="mume-header" id="1-%E9%85%8D%E7%BD%AEipv6%E5%9C%B0%E5%9D%80-chapter1">1. &#x914D;&#x7F6E;IPV6&#x5730;&#x5740;-Chapter1</h2>
+
+<blockquote>
+<p>&#x5728;&#x60A8;&#x7684;&#x8003;&#x8BD5;&#x7CFB;&#x7EDF;&#x4E0A;&#x914D;&#x7F6E;&#x63A5;&#x53E3;<code>eth0</code>&#x4F7F;&#x7528;&#x4E0B;&#x5217;IPv6&#x5730;&#x5740;&#xFF1A;</p>
+<ul>
+<li>[ ] servera &#x4E0A;&#x7684;&#x5730;&#x5740;&#x5E94;&#x8BE5;&#x662F;<code>fddb:fe2a:ab1e::c0a8:64/64</code></li>
+<li>[ ] serverb &#x4E0A;&#x7684;&#x5730;&#x5740;&#x5E94;&#x8BE5;&#x662F;<code>fddb:fe2a:ab1e::c0a8:65/64</code></li>
+<li>[ ] &#x4E24;&#x4E2A;&#x7CFB;&#x7EDF;&#x5FC5;&#x987B;&#x80FD;&#x4E0E;&#x7F51;&#x7EDC;<code>fddb:fe2a:ab1e::c0a8:fe</code>&#x5185;&#x7684;&#x7CFB;&#x7EDF;&#x901A;&#x4FE1;</li>
+<li>[ ] &#x5730;&#x5740;&#x5FC5;&#x987B;&#x5728;&#x91CD;&#x542F;&#x540E;&#x4F9D;&#x65E7;&#x751F;&#x6548;</li>
+<li>[ ] &#x4E24;&#x4E2A;&#x7CFB;&#x7EDF;&#x5FC5;&#x987B;&#x4FDD;&#x6301;&#x5F53;&#x524D;&#x7684;IPv4&#x5730;&#x5740;&#x5E76;&#x80FD;&#x901A;&#x4FE1;</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-bastion
+nmcli con mod <span class="token string">&quot;Wired connection 1&quot;</span> ipv6.method manual ipv6.addresses fddb:fe2a:ab1e::c0a8:fe/64
+nmcli con up <span class="token string">&quot;Wired connection 1&quot;</span>
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># nmcli connection show | grep eth0</span>
+<span class="token variable"><span class="token variable">`</span>Wired connection <span class="token number">1</span><span class="token variable">`</span></span>  4ae4bb9e-8f2d-3774-95f8-868d74edcc3c  ethernet  eth0
+
+<span class="token comment"># nmcli con mod &quot;Wired connection 1&quot; ipv6.method manual ipv6.addresses fddb:fe2a:ab1e::c0a8:64/64</span>
+<span class="token comment"># nmcli con up &quot;Wired connection 1&quot;</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># ping6 -c4 fddb:fe2a:ab1e::c0a8:fe</span>
+<span class="token number">64</span> bytes from fddb:fe2a:ab1e::c0a8:fe: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">3.62</span> ms
+<span class="token punctuation">..</span>.
+
+<span class="token comment"># ping -c4 172.25.250.254</span>
+<span class="token number">64</span> bytes from <span class="token number">172.25</span>.250.254: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">1.16</span> ms
+<span class="token punctuation">..</span>.
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># nmcli connection show | grep eth0</span>
+<span class="token variable"><span class="token variable">`</span>Wired connection <span class="token number">1</span><span class="token variable">`</span></span>  81e1324d-6dda-3ab6-b93f-dddb09b7f8ba  ethernet  eth0
+
+<span class="token comment"># nmcli con mod &quot;Wired connection 1&quot; ipv6.method manual ipv6.addresses fddb:fe2a:ab1e::c0a8:65/64</span>
+<span class="token comment"># nmcli con up &quot;Wired connection 1&quot;</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># ping6 -c4 fddb:fe2a:ab1e::c0a8:fe</span>
+<span class="token comment"># ping -c4 172.25.250.254</span>
+</pre><h2 class="mume-header" id="2-%E9%85%8D%E7%BD%AEdhcp%E6%9C%8D%E5%8A%A1%E5%99%A8-chapter4">2. &#x914D;&#x7F6E;dhcp&#x670D;&#x52A1;&#x5668;-Chapter4</h2>
+
+<blockquote>
+<p>Configure a DHCP server for IPv4 address assignment and provide fixed IP addresses to selected systems.</p>
+<ul>
+<li>[ ] you deploy a DHCP server on <code>servera</code></li>
+<li>[ ]  the second interface <code>eth1</code></li>
+<li>[ ] The DHCP server manages the <code>192.168.0.0/24</code> subnet</li>
+<li>[ ] delivers IP addresses in the <code>192.168.0.200</code> to <code>192.168.0.254</code> range</li>
+<li>[ ] broadcast-address <code>192.168.0.255</code></li>
+<li>[ ] gateway <code>192.168.0.1</code></li>
+<li>[ ] domain-name-servers <code>172.25.254.254</code></li>
+<li>[ ]  domain-search <code>example.net</code></li>
+<li>[ ] default-lease-time <code>800</code></li>
+<li>[ ] associates the <code>192.168.0.100</code> IP address to the <code>52:54:00:01:fa:0e</code> MAC address</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-servera
+nmcli con <span class="token function">add</span> con-name ge-conn <span class="token punctuation">\</span>
+<span class="token builtin class-name">type</span> ethernet ifname eth1 ipv4.method manual ipv4.addresses <span class="token number">192.168</span>.0.10/24
+nmcli con up ge-conn
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search dhcp</span>
+<span class="token comment"># yum -y install dhcp-server</span>
+
+<span class="token comment"># rpm -qc dhcp-server</span>
+
+<span class="token comment"># cat /etc/sysconfig/dhcpd</span>
+<span class="token comment"># cp /usr/lib/systemd/system/dhcpd.service /etc/systemd/system/</span>
+<span class="token comment"># vim /etc/systemd/system/dhcpd.service</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+<span class="token key attr-name">ExecStart</span><span class="token punctuation">=</span><span class="token value attr-value">/usr/sbin/dhcpd -f -cf /etc/dhcp/dhcpd.conf -user dhcpd -group dhcpd --no-pid eth1</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl --system daemon-reload</span>
+<span class="token comment"># systemctl restart dhcpd.service</span>
+
+<span class="token comment"># cat /etc/dhcp/dhcpd.conf</span>
+<span class="token comment"># cp /usr/share/doc/dhcp-server/dhcpd.conf.example /etc/dhcp/dhcpd.conf</span>
+<span class="token comment"># vim /etc/dhcp/dhcpd.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">log-facility local7;
+
+subnet 192.168.0.0 netmask 255.255.255.0 {
+  range 192.168.0.200 192.168.0.254;
+  option domain-name-servers 172.25.254.254;
+  option domain-name &quot;example.net&quot;;
+  option routers 192.168.0.1;
+  option broadcast-address 192.168.0.255;
+  default-lease-time 800;
+  max-lease-time 7200;
+}
+
+host fantasia {
+  hardware ethernet 52:54:00:01:fa:0e;
+  fixed-address 192.168.0.100;
+}
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># rpm -ql dhcp-server | grep service</span>
+<span class="token comment"># systemctl enable dhcpd</span>
+<span class="token comment"># systemctl restart dhcpd</span>
+<span class="token comment"># systemctl status dhcpd</span>
+<span class="token comment"># ss -anup | egrep &apos;67|68&apos;</span>
+
+<span class="token comment"># firewall-cmd --permanent --add-service=dhcp</span>
+<span class="token comment"># firewall-cmd --reload</span>
+</pre><p><strong>[root@servere]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># nmcli con mod CN ipv4.method auto</span>
+<span class="token comment"># nmcli con up CN</span>
+
+<span class="token comment"># ip a s | grep -w inet</span>
+<span class="token number">2</span>: eth0: <span class="token punctuation">..</span>.
+    link/ether <span class="token variable"><span class="token variable">`</span><span class="token number">52</span>:54:00:01:fa:0e<span class="token variable">`</span></span> <span class="token punctuation">..</span>.
+    inet <span class="token variable"><span class="token variable">`</span><span class="token number">192.168</span>.0.100/24<span class="token variable">`</span></span> brd <span class="token punctuation">..</span>.
+</pre><h2 class="mume-header" id="3-%E9%85%8D%E7%BD%AE%E9%98%B2%E7%81%AB%E5%A2%99">3. &#x914D;&#x7F6E;&#x9632;&#x706B;&#x5899;</h2>
+
+<blockquote>
+<p>&#x5728; <code>servera</code> &#x548C; <code>serverb</code> &#x4E0A;&#x5206;&#x522B;&#x8BBE;&#x7F6E;&#xFF0C;&#x9488;&#x5BF9;SSH</p>
+<ul>
+<li>[ ] &#x5141;&#x8BB8;<code>172.25.250.0/24</code> &#x7684;&#x57DF;&#x5BF9; servera &#x548C; servera &#x8FDB;&#x884C;<code>SSH</code></li>
+<li>[ ] &#x7981;&#x6B62;<code>172.24.250.0/24</code> &#x7684;&#x57DF;&#x5BF9; servera &#x548C; serverb &#x8FDB;&#x884C;<code>SSH</code></li>
+</ul>
+</blockquote>
+<p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># man -k fire</span>
+<span class="token punctuation">..</span>.
+firewalld.richlanguage <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> - Rich Language Documentation
+<span class="token comment"># man firewalld.richlanguage | grep rule.*service</span>
+<span class="token punctuation">..</span>.
+           rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv4&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;192.168.0.0/24&quot;</span> <span class="token function">service</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;tftp&quot;</span> log <span class="token assign-left variable">prefix</span><span class="token operator">=</span><span class="token string">&quot;tftp&quot;</span> <span class="token assign-left variable">level</span><span class="token operator">=</span><span class="token string">&quot;info&quot;</span> limit <span class="token assign-left variable">value</span><span class="token operator">=</span><span class="token string">&quot;1/m&quot;</span> accept
+           rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv6&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;1:2:3:4:6::&quot;</span> <span class="token function">service</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;radius&quot;</span> log <span class="token assign-left variable">prefix</span><span class="token operator">=</span><span class="token string">&quot;dns&quot;</span> <span class="token assign-left variable">level</span><span class="token operator">=</span><span class="token string">&quot;info&quot;</span> limit <span class="token assign-left variable">value</span><span class="token operator">=</span><span class="token string">&quot;3/m&quot;</span> reject
+
+<span class="token comment"># firewall-cmd --list-all</span>
+<span class="token comment"># firewall-cmd --permanent --remove-service=ssh</span>
+<span class="token comment"># firewall-cmd --permanent --add-rich-rule=&apos;rule family=&quot;ipv4&quot; source address=&quot;172.25.250.0/24&quot; service name=&quot;ssh&quot; accept&apos;</span>
+<span class="token comment"># firewall-cmd --permanent --add-rich-rule=&apos;rule family=&quot;ipv4&quot; source address=&quot;172.24.250.0/24&quot; service name=&quot;ssh&quot; reject&apos;</span>
+
+<span class="token comment"># firewall-cmd --reload</span>
+
+<span class="token comment"># firewall-cmd --list-all</span>
+public <span class="token punctuation">(</span>active<span class="token punctuation">)</span>
+<span class="token punctuation">..</span>.
+  services: cockpit dhcpv6-client iscsi-target mountd nfs rpc-bind samba
+<span class="token punctuation">..</span>.
+  rich rules: 
+	rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv4&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;172.25.250.0/24&quot;</span> <span class="token function">service</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;ssh&quot;</span> accept
+	rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv4&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;172.24.250.0/24&quot;</span> <span class="token function">service</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;ssh&quot;</span> reject
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># firewall-cmd --list-all</span>
+<span class="token comment"># firewall-cmd --permanent --remove-service=ssh</span>
+<span class="token comment"># firewall-cmd --permanent --add-rich-rule=&apos;rule family=&quot;ipv4&quot; source address=&quot;172.25.250.0/24&quot; service name=&quot;ssh&quot; accept&apos;</span>
+<span class="token comment"># firewall-cmd --permanent --add-rich-rule=&apos;rule family=&quot;ipv4&quot; source address=&quot;172.24.250.0/24&quot; service name=&quot;ssh&quot; reject&apos;</span>
+
+<span class="token comment"># firewall-cmd --reload</span>
+
+<span class="token comment"># firewall-cmd --list-all</span>
+</pre><h2 class="mume-header" id="4-%E5%AE%8C%E6%88%90%E4%B8%BBdns%E9%85%8D%E7%BD%AE-chapter3">4. &#x5B8C;&#x6210;&#x4E3B;DNS&#x914D;&#x7F6E;-Chapter3</h2>
+
+<blockquote>
+<p>&#x5F53;&#x524D;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x597D;&#x4E86;DNS&#x670D;&#x52A1;&#xFF0C;&#x8981;&#x6C42;</p>
+<ul>
+<li>[ ] &#x5728;<code>servera</code>&#x914D;&#x7F6E;&#x4E3B;DNS</li>
+<li>[ ] &#x914D;&#x7F6E;&#x6B63;&#x5411;&#x89E3;&#x6790;<code>servera</code>,<code>serverb</code></li>
+<li>[ ] &#x914D;&#x7F6E;&#x53CD;&#x5411;&#x89E3;&#x6790;<code>servera</code>,<code>serverb</code></li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-1.foundation
+$ rht-vmctl start classroom
+$ rht-vmctl start bastion
+$ rht-vmctl start servera
+$ rht-vmctl start serverb
+
+-2.servera
+<span class="token comment"># install</span>
+yum -y <span class="token function">install</span> <span class="token builtin class-name">bind</span>
+<span class="token comment"># update named.conf</span>
+<span class="token function">sed</span> -i <span class="token string">&apos;/^include/d&apos;</span> /etc/named.conf
+<span class="token function">cat</span> <span class="token operator">&gt;&gt;</span>  /etc/named.conf <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+zone &quot;lab.example.com&quot; IN {
+        type master;
+        file &quot;example.com.localhost&quot;;
+        allow-update { none; };
+};
+
+zone &quot;25.172.in-addr.arpa&quot; IN {
+        type master;
+        file &quot;25.172.loopback&quot;;
+        allow-update { none; };
+};
+
+include &quot;/etc/named.rfc1912.zones&quot;;
+include &quot;/etc/named.root.key&quot;;
+EOF</span>
+<span class="token comment"># create zone files</span>
+<span class="token function">cp</span> -a /var/named/named.localhost /var/named/example.com.localhost
+<span class="token function">cp</span> -a /var/named/named.loopback /var/named/25.172.loopback
+<span class="token comment"># update zone file</span>
+<span class="token function">sed</span> -i <span class="token string">&apos;s/@/localhost./g&apos;</span> /var/named/example.com.localhost
+<span class="token function">sed</span> -i <span class="token string">&apos;2s/localhost./@/&apos;</span> /var/named/example.com.localhost
+<span class="token function">sed</span> -i <span class="token string">&apos;s/@/localhost./g&apos;</span> /var/named/25.172.loopback
+<span class="token function">sed</span> -i <span class="token string">&apos;2s/localhost./@/&apos;</span> /var/named/25.172.loopback
+
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search dns</span>
+<span class="token comment"># rpm -qc bind</span>
+<span class="token comment"># vim /etc/named.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">options {
+        listen-on port 53 { any; };
+...
+        allow-query     { localhost; 172.25.250.0/24; };
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># vim /var/named/example.com.localhost</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">$TTL 1D
+@       IN SOA  servera.lab.example.com. rname.invalid. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+        NS      servera.lab.example.com.
+servera        A       172.25.250.10
+serverb        A       172.25.250.11
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># vim /var/named/25.172.loopback</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">$TTL 1D
+@       IN SOA  servera.lab.example.com. rname.invalid. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+        NS      servera.lab.example.com.
+10.250        PTR     servera.lab.example.com.
+11.250        PTR     serverb.lab.example.com.
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search dns</span>
+<span class="token comment"># rpm -ql bind | grep service</span>
+<span class="token comment"># systemctl enable --now named</span>
+<span class="token comment"># systemctl status named</span>
+<span class="token punctuation">..</span>.
+   Loaded: loaded <span class="token punctuation">(</span>/usr/lib/systemd/system/named.service<span class="token punctuation">;</span> <span class="token variable"><span class="token variable">`</span>enabled<span class="token variable">`</span></span><span class="token punctuation">..</span>.
+   Active: <span class="token variable"><span class="token variable">`</span>active<span class="token variable">`</span></span> <span class="token punctuation">(</span>running<span class="token punctuation">)</span>
+   
+<span class="token comment"># firewall-cmd --permanent --add-service=dns</span>
+<span class="token comment"># firewall-cmd --reload</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># host servera.lab.example.com 172.25.250.10</span>
+Using domain server:
+Name: <span class="token variable"><span class="token variable">`</span><span class="token number">172.25</span>.250.10<span class="token variable">`</span></span>
+Address: <span class="token number">172.25</span>.250.10<span class="token comment">#53</span>
+Aliases: 
+<span class="token variable"><span class="token variable">`</span>servera.lab.example.com has address <span class="token number">172.25</span>.250.10<span class="token variable">`</span></span>
+
+<span class="token comment"># host 172.25.250.10 172.25.250.10</span>
+Using domain server:
+Name: <span class="token number">172.25</span>.250.10
+Address: <span class="token number">172.25</span>.250.10<span class="token comment">#53</span>
+Aliases: 
+<span class="token variable"><span class="token variable">`</span><span class="token number">10.250</span>.25.172.in-addr.arpa<span class="token variable">`</span></span> domain name pointer <span class="token variable"><span class="token variable">`</span>servera.lab.example.com.<span class="token variable">`</span></span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># nslookup servera.lab.example.com 172.25.250.10</span>
+Server:		<span class="token number">172.25</span>.250.10
+Address:	<span class="token number">172.25</span>.250.10<span class="token comment">#53</span>
+
+Name:	servera.lab.example.com
+Address: <span class="token number">172.25</span>.250.10
+
+<span class="token comment"># nslookup 172.25.250.10 172.25.250.10</span>
+<span class="token number">10.250</span>.25.172.in-addr.arpa	name <span class="token operator">=</span> servera.lab.example.com.
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># dig servera.lab.example.com @172.25.250.10</span>
+<span class="token punctuation">..</span>.
+<span class="token punctuation">;</span><span class="token punctuation">;</span> flags: qr aa rd ra<span class="token punctuation">;</span> QUERY: <span class="token number">1</span>, ANSWER: <span class="token variable"><span class="token variable">`</span><span class="token number">1</span><span class="token variable">`</span></span>, AUTHORITY: <span class="token number">1</span>, ADDITIONAL: <span class="token number">1</span>
+<span class="token punctuation">..</span>.
+<span class="token punctuation">;</span><span class="token punctuation">;</span> ANSWER SECTION:
+<span class="token variable"><span class="token variable">`</span>servera.lab.example.com. <span class="token number">86400</span>	IN	A	<span class="token number">172.25</span>.250.10<span class="token variable">`</span></span>
+<span class="token punctuation">..</span>.
+
+<span class="token comment"># dig -x 172.25.250.10 @172.25.250.10</span>
+<span class="token punctuation">..</span>.
+<span class="token punctuation">;</span><span class="token punctuation">;</span> flags: qr aa rd ra<span class="token punctuation">;</span> QUERY: <span class="token number">1</span>, ANSWER: <span class="token variable"><span class="token variable">`</span><span class="token number">1</span><span class="token variable">`</span></span>, AUTHORITY: <span class="token number">1</span>, ADDITIONAL: <span class="token number">2</span>
+<span class="token punctuation">..</span>
+<span class="token punctuation">;</span><span class="token punctuation">;</span> ANSWER SECTION:
+<span class="token number">10.250</span>.25.172.in-addr.arpa. <span class="token number">86400</span> IN	PTR	servera.lab.example.com.
+<span class="token punctuation">..</span>.
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># host serverb.lab.example.com 172.25.250.10</span>
+Using domain server:
+Name: <span class="token variable"><span class="token variable">`</span><span class="token number">172.25</span>.250.10<span class="token variable">`</span></span>
+Address: <span class="token number">172.25</span>.250.10<span class="token comment">#53</span>
+Aliases: 
+<span class="token variable"><span class="token variable">`</span>serverb.lab.example.com has address <span class="token number">172.25</span>.250.11<span class="token variable">`</span></span>
+
+<span class="token comment"># host 172.25.250.11 172.25.250.10</span>
+Using domain server:
+Name: <span class="token number">172.25</span>.250.10
+Address: <span class="token number">172.25</span>.250.10<span class="token comment">#53</span>
+Aliases: 
+<span class="token variable"><span class="token variable">`</span><span class="token number">11.250</span>.25.172.in-addr.arpa<span class="token variable">`</span></span> domain name pointer <span class="token variable"><span class="token variable">`</span>serverbs.lab.example.com.<span class="token variable">`</span></span>
+</pre><h2 class="mume-header" id="5-%E9%80%9A%E8%BF%87smb%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95-chapter10">5. &#x901A;&#x8FC7;SMB&#x5171;&#x4EAB;&#x76EE;&#x5F55;-Chapter10</h2>
+
+<blockquote>
+<p>&#x5728;<code>servera</code>&#x4E0A;&#x914D;&#x7F6E;SMB&#x670D;&#x52A1;</p>
+<ul>
+<li>[ ] &#x60A8;&#x7684;SMB&#x670D;&#x52A1;&#x5668;&#x5FC5;&#x987B;&#x662F;<code>STAFF</code>&#x5DE5;&#x4F5C;&#x7EC4;&#x7684;&#x4E00;&#x4E2A;&#x6210;&#x5458;</li>
+<li>[ ] &#x5171;&#x4EAB;<code>/common</code>&#x76EE;&#x5F55;&#x5171;&#x4EAB;&#x540D;&#x5FC5;&#x987B;&#x4E3A;<code>common</code></li>
+<li>[ ] &#x53EA;&#x6709;<code>example.com</code>&#x57DF;&#x5185;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;common&#x5171;&#x4EAB;</li>
+<li>[ ] <code>common</code>&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x4EE5;&#x6D4F;&#x89C8;&#x7684;</li>
+<li>[ ] &#x7528;&#x6237;<code>rob</code>&#x5FC5;&#x987B;&#x80FD;&#x591F;&#x8BFB;&#x53D6;&#x5171;&#x4EAB;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x9A8C;&#x8BC1;&#x7684;&#x5BC6;&#x7801;&#x662F;<code>compede</code></li>
+<li>[ ] &#x8981;&#x6C42;<code>rob</code> &#x7528;&#x6237;&#x4EE5;&#x53EA;&#x8BFB;&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x8BE5;&#x76EE;&#x5F55;&#xFF0C;<code>brian</code> &#x53EF;&#x4EE5;&#x7528;&#x8BFB;&#x5199;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8BBF;&#x95EE;&#x8BE5;&#x76EE;&#x5F55;&#xFF0C;brian&#x5BC6;&#x7801;&#x4E3A;<code>postroll</code></li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-servera
+<span class="token function">useradd</span> brian
+<span class="token function">useradd</span> rob
+-serverb
+<span class="token function">useradd</span> brian
+<span class="token function">useradd</span> rob
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search samba</span>
+<span class="token comment"># yum list samba samba-common samba-client</span>
+<span class="token comment"># yum -y install samba samba-client</span>
+
+<span class="token comment"># id brian; id rob</span>
+<span class="token comment"># egrep &apos;brian|rob&apos; /etc/passwd</span>
+<span class="token comment"># usermod -s /sbin/nologin brian</span>
+<span class="token comment"># usermod -s /sbin/nologin rob</span>
+
+<span class="token comment"># pdbedit -L</span>
+<span class="token comment"># smbpasswd -a brian</span>
+New SMB password: <span class="token variable"><span class="token variable">`</span>postroll<span class="token variable">`</span></span>
+Retype new SMB password: <span class="token variable"><span class="token variable">`</span>postroll<span class="token variable">`</span></span>
+Added user brian.
+<span class="token comment"># (echo compede; echo compede) | smbpasswd -a rob</span>
+New SMB password:
+Retype new SMB password:
+Added user rob.
+<span class="token comment"># pdbedit -L</span>
+
+<span class="token comment"># mkdir /common</span>
+<span class="token comment"># chown :brian /common</span>
+<span class="token comment"># chmod 2775 /common</span>
+
+<span class="token comment"># vim /etc/samba/smb.conf.example</span>
+<span class="token comment"># man semanage fcontext | grep \#</span>
+<span class="token comment"># semanage fcontext -a -t samba_share_t &quot;/common(/.*)?&quot;</span>
+<span class="token comment"># restorecon -Rv /common</span>
+<span class="token comment"># ls -ldZ /common/</span>
+drwxrwsr-x. <span class="token number">2</span> root brian unconfined_u:object_r:<span class="token variable"><span class="token variable">`</span>samba_share_t<span class="token variable">`</span></span>:s0 <span class="token number">6</span> Aug  <span class="token number">7</span> <span class="token number">13</span>:05 /common/
+
+<span class="token comment"># vim /etc/samba/smb.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+<span class="token key attr-name">workgroup</span> <span class="token punctuation">=</span> <span class="token value attr-value">STAFF</span>
+...
+<span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">common</span><span class="token punctuation">]</span></span>
+        <span class="token key attr-name">path</span> <span class="token punctuation">=</span> <span class="token value attr-value">/common</span>
+        <span class="token key attr-name">hosts allow</span> <span class="token punctuation">=</span> <span class="token value attr-value">127. 172.25.</span>
+        <span class="token key attr-name">browseable</span> <span class="token punctuation">=</span> <span class="token value attr-value">Yes</span> 
+        <span class="token key attr-name">valid users</span> <span class="token punctuation">=</span> <span class="token value attr-value">@brian rob</span>
+        <span class="token key attr-name">write list</span> <span class="token punctuation">=</span> <span class="token value attr-value">@brian</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl enable --now smb nmb</span>
+
+<span class="token comment"># firewall-cmd --permanent --add-service=samba</span>
+<span class="token comment"># firewall-cmd --reload</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># smbclient -L //servera -N</span>
+Anonymous login successful
+
+	Sharename       Type      Comment
+	---------       ----      -------
+<span class="token punctuation">..</span>.
+	<span class="token variable"><span class="token variable">`</span>common<span class="token variable">`</span></span>         Disk
+<span class="token punctuation">..</span>.
+
+<span class="token comment"># smbclient -L //servera -U rob%compede</span>
+<span class="token comment"># smbclient //servera/common -U rob%compede</span>
+</pre><h2 class="mume-header" id="6-samba-%E5%A4%9A%E7%94%A8%E6%88%B7-chapter10">6. Samba &#x591A;&#x7528;&#x6237;-Chapter10</h2>
+
+<blockquote>
+<p>&#x5728;<code>serverb</code> &#x4E0A;&#xFF0C;&#x8981;&#x6C42;&#x901A;&#x8FC7;smb &#x591A;&#x7528;&#x6237;&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x5171;&#x4EAB;&#x76EE;&#x5F55;<code>common</code> &#x6302;&#x8F7D;&#x5230;<code>/mnt/private</code>&#x4E0A;</p>
+<ul>
+<li>
+<p>[ ] &#x8981;&#x6C42;&#x5728;&#x5BF9;&#x8BE5;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x65F6;&#xFF0C;&#x4EE5;<code>rob</code> &#x7684;&#x8EAB;&#x4EFD;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</p>
+</li>
+<li>
+<p>[ ] &#x8981;&#x6C42;&#x6BCF;&#x6B21;&#x5F00;&#x673A;&#x8BE5;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x6302;&#x8F7D;</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search cifs</span>
+<span class="token comment"># yum search samba</span>
+<span class="token comment"># yum -y install cifs-utils samba-client</span>
+
+<span class="token comment"># smbclient -L //servera -N</span>
+<span class="token comment"># smbclient -L //servera -U rob%compede</span>
+
+<span class="token comment"># mkdir /mnt/private</span>
+
+<span class="token comment"># man mount.cifs</span>
+<span class="token comment"># vim /etc/samba/cred.txt</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini"><span class="token key attr-name">username</span><span class="token punctuation">=</span><span class="token value attr-value">rob</span>
+<span class="token key attr-name">password</span><span class="token punctuation">=</span><span class="token value attr-value">compede</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># chmod 600 /etc/samba/cred.txt</span>
+<span class="token comment"># ll /etc/samba/cred.txt</span>
+-rw-------. <span class="token number">1</span> root root <span class="token number">30</span> Aug  <span class="token number">7</span> <span class="token number">13</span>:31 /etc/samba/cred.txt
+
+<span class="token comment"># vim /etc/fstab</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+<span class="token key attr-name">//servera/common /mnt/private cifs credentials</span><span class="token punctuation">=</span><span class="token value attr-value">/etc/samba/cred.txt,multiuser,seal 0 0</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># mount &#x2013;a</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># df -ht cifs</span>
+Filesystem        Size  Used Avail Use% Mounted on
+//servera/common   10G  <span class="token number">2</span>.2G  <span class="token number">7</span>.9G  <span class="token number">22</span>% /mnt/private
+
+<span class="token comment"># ls /mnt/private/</span>
+<span class="token comment"># touch /mnt/private/ro.txt</span>
+touch: cannot <span class="token function">touch</span> <span class="token string">&apos;/mnt/private/ro.txt&apos;</span><span class="token builtin class-name">:</span> Permission denied
+<span class="token comment"># su - brian</span>
+$ cifscreds <span class="token function">add</span> servera
+Password: <span class="token variable"><span class="token variable">`</span>postroll<span class="token variable">`</span></span>
+$ <span class="token function">touch</span> /mnt/private/rw.txt
+$ <span class="token function">ls</span> /mnt/private/rw.txt
+-rwxr-xr-x. <span class="token number">1</span> brian brian <span class="token number">0</span> Aug  <span class="token number">7</span> <span class="token number">13</span>:41 /mnt/private/rw.txt
+</pre><h2 class="mume-header" id="7-%E9%85%8D%E7%BD%AEnfs%E6%9C%8D%E5%8A%A1-chapter10">7. &#x914D;&#x7F6E;NFS&#x670D;&#x52A1;-Chapter10</h2>
+
+<blockquote>
+<p>&#x5728;<code>servera</code>&#x914D;&#x7F6E;NFS&#x670D;&#x52A1;&#xFF0C;&#x8981;&#x6C42;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>[ ] &#x4EE5;&#x53EA;&#x8BFB;&#x7684;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;&#x76EE;&#x5F55;<code>/public</code>&#x540C;&#x65F6;&#x53EA;&#x80FD;&#x88AB;<code>example.com</code>&#x57DF;&#x4E2D;&#x7684;&#x7CFB;&#x7EDF;&#x8BBF;&#x95EE;</li>
+<li>[ ] &#x4EE5;&#x8BFB;&#x5199;&#x7684;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;&#x76EE;&#x5F55;<code>/protected</code>&#x80FD;&#x88AB;<code>example.com</code>&#x57DF;&#x4E2D;&#x7684;&#x7CFB;&#x7EDF;&#x8BBF;&#x95EE;</li>
+<li>[ ] &#x76EE;&#x5F55;<code>/protected</code>&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x540D;&#x4E3A;<code>project</code>&#x62E5;&#x6709;&#x4EBA;&#x4E3A;<code>student</code>&#x7684;&#x5B50;&#x76EE;&#x5F55;</li>
+<li>[ ] &#x7528;&#x6237;<code>student</code>&#x80FD;&#x4EE5;&#x8BFB;&#x5199;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;<code>/protected/project</code></li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info class="language-"><code>-foundation
+classroom,bastion,servera,serverb
+</code></pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># mkdir -p /public /protected/project</span>
+<span class="token comment"># chown student /protected/project</span>
+
+<span class="token comment"># mandb &amp;&amp; man -k nfs | grep table</span>
+<span class="token comment"># man exports</span>
+<span class="token comment"># vim /etc/exports</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">/public				*.example.com(ro)
+/protected		*.example.com(rw)
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl list-unit-files | grep nfs</span>
+<span class="token comment"># systemctl enable --now nfs-server</span>
+
+<span class="token comment"># rpcinfo</span>
+<span class="token comment"># grep port.*mapper /etc/services</span>
+
+<span class="token comment"># firewall-cmd --permanent --add-service=nfs</span>
+<span class="token comment"># firewall-cmd --permanent --add-service=mountd</span>
+<span class="token comment"># firewall-cmd --permanent --add-service=rpc-bind</span>
+<span class="token comment"># firewall-cmd --reload</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># showmount -e servera</span>
+Export list <span class="token keyword keyword-for">for</span> servera:
+/protected *.example.com
+/public    *.example.com
+</pre><h2 class="mume-header" id="8-%E6%8C%82%E8%BD%BD%E4%B8%80%E4%B8%AAnfs%E5%85%B1%E4%BA%AB-chapter10">8. &#x6302;&#x8F7D;&#x4E00;&#x4E2A;NFS&#x5171;&#x4EAB;-Chapter10</h2>
+
+<blockquote>
+<p>&#x5728;<code>serverb</code>&#x4E0A;&#x6302;&#x8F7D;&#x4E00;&#x4E2A;&#x6765;&#x81EA;<code>servera</code>&#x7684;NFS&#x5171;&#x4EAB;&#xFF0C;&#x5E76;&#x7B26;&#x5408;&#x4E0B;&#x5217;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>[ ] <code>/public</code>&#x6302;&#x8F7D;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x76EE;&#x5F55;&#x4E0A;<code>/mnt/nfsmount</code></li>
+<li>[ ] <code>/protected</code>&#x6302;&#x8F7D;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x76EE;&#x5F55;&#x4E0A;<code>/mnt/nfssecure</code></li>
+<li>[ ] &#x7528;&#x6237;<code>student</code>&#x80FD;&#x591F;&#x5728;<code>/mnt/nfssecure/project</code>&#x4E0A;&#x521B;&#x5EFA;&#x6587;&#x4EF6;</li>
+<li>[ ] &#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#x81EA;&#x52A8;&#x6302;&#x8F7D;</li>
+</ul>
+</blockquote>
+<p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># showmount -e servera</span>
+Export list <span class="token keyword keyword-for">for</span> servera:
+/protected *.example.com
+/public    *.example.com
+
+<span class="token comment"># mkdir /mnt/nfs{mount,secure}</span>
+
+<span class="token comment"># vim /etc/fstab</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+servera:/public				/mnt/nfsmount		nfs	ro	0 0
+servera:/protected		/mnt/nfssecure	nfs	rw	0 0
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># mount &#x2013;a</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># df -ht nfs4</span>
+Filesystem          Size  Used Avail Use% Mounted on
+servera:/public      10G  <span class="token number">2</span>.1G  <span class="token number">7</span>.9G  <span class="token number">22</span>% /mnt/nfsmount
+servera:/protected   10G  <span class="token number">2</span>.1G  <span class="token number">7</span>.9G  <span class="token number">22</span>% /mnt/nfssecure
+
+<span class="token comment"># ls /mnt/nfsmount</span>
+<span class="token comment"># su - student -c &quot;touch /mnt/nfssecure/project/s.txt&quot;</span>
+</pre><h2 class="mume-header" id="9-%E9%85%8D%E7%BD%AEiscsi%E6%9C%8D%E5%8A%A1%E7%AB%AF-chapter-11">9. &#x914D;&#x7F6E;iSCSI&#x670D;&#x52A1;&#x7AEF;-Chapter 11</h2>
+
+<blockquote>
+<p>&#x914D;&#x7F6E;<code>servera</code>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;iSCSI&#x670D;&#x52A1;&#xFF0C;&#x78C1;&#x76D8;&#x540D;&#x4E3A;<code>iqn.2014-11.com.example:servera</code>&#xFF0C;&#x5E76;&#x7B26;&#x5408;&#x4E0B;&#x5217;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>[ ] &#x670D;&#x52A1;&#x7AEF;&#x53E3;&#x4E3A;<code>3260</code></li>
+<li>[ ] &#x4F7F;&#x7528;<code>iscsi_store</code>&#x4F5C;&#x5176;&#x540E;&#x7AEF;&#x5377; &#x5176;&#x5927;&#x5C0F;&#x4E3A;<code>3G</code></li>
+<li>[ ] &#x6B64;&#x670D;&#x52A1;&#x53EA;&#x80FD;&#x88AB;<code>serverb.lab.example.com</code>&#x8BBF;&#x95EE;</li>
+</ul>
+</blockquote>
+<p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># lsblk</span>
+<span class="token comment"># fdisk /dev/vdb</span>
+Command <span class="token punctuation">(</span>m <span class="token keyword keyword-for">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span>n<span class="token variable">`</span></span>
+<span class="token punctuation">..</span>.
+Select <span class="token punctuation">(</span>default p<span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+<span class="token punctuation">..</span>.
+Partition number <span class="token punctuation">(</span><span class="token number">1</span>-4, default <span class="token number">1</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+First sector <span class="token punctuation">(</span><span class="token number">2048</span>-10485759, default <span class="token number">2048</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+Last sector, +sectors or +size<span class="token punctuation">{</span>K,M,G,T,P<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">2048</span>-10485759, default <span class="token number">10485759</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span>+3G<span class="token variable">`</span></span>
+<span class="token punctuation">..</span>.
+Command <span class="token punctuation">(</span>m <span class="token keyword keyword-for">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span>w<span class="token variable">`</span></span>
+
+<span class="token comment"># yum list target*</span>
+<span class="token comment"># yum -y install targetcli</span>
+
+<span class="token comment"># systemctl enable --now target</span>
+
+<span class="token comment"># targetcli</span>
+/<span class="token operator">&gt;</span> <span class="token builtin class-name">help</span>
+/<span class="token operator">&gt;</span> <span class="token function">ls</span>
+/<span class="token operator">&gt;</span> /backstores/block create iscsi_store /dev/vdb1
+/<span class="token operator">&gt;</span> /iscsi create iqn.2014-11.com.example:servera
+/<span class="token operator">&gt;</span> /iscsi/iqn.2014-11.com.example:servera/tpg1/luns create /backstores/block/iscsi_store
+/<span class="token operator">&gt;</span> /iscsi/iqn.2014-11.com.example:servera/tpg1/acls create iqn.2014-06.com.example:serverb
+/<span class="token operator">&gt;</span> /iscsi/iqn.2014-11.com.example:servera/tpg1/portals delete <span class="token number">0.0</span>.0.0 <span class="token number">3260</span> 
+/<span class="token operator">&gt;</span> /iscsi/iqn.2014-11.com.example:servera/tpg1/portals create <span class="token number">172.25</span>.250.10
+/<span class="token operator">&gt;</span> <span class="token function">ls</span>
+o- / <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+  o- backstores <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+  <span class="token operator">|</span> o- block <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>Storage Objects: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span> <span class="token operator">|</span> o- iscsi_store <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>/dev/vdb1 <span class="token punctuation">(</span><span class="token number">0</span> bytes<span class="token punctuation">)</span> write-thru activated<span class="token punctuation">]</span>
+  <span class="token operator">|</span> <span class="token operator">|</span>   o- alua <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>ALUA Groups: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span> <span class="token operator">|</span>     o- default_tg_pt_gp <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>ALUA state: Active/optimized<span class="token punctuation">]</span>
+  <span class="token operator">|</span> o- fileio <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>Storage Objects: <span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span> o- pscsi <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>Storage Objects: <span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span> o- ramdisk <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>Storage Objects: <span class="token number">0</span><span class="token punctuation">]</span>
+  o- iscsi <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>Targets: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span> o- iqn.2014-11.com.example:servera <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>TPGs: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span>   o- tpg1 <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>no-gen-acls, no-auth<span class="token punctuation">]</span>
+  <span class="token operator">|</span>     o- acls <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>ACLs: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span>     <span class="token operator">|</span> o- iqn.2014-06.com.example:serverb <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>Mapped LUNs: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span>     <span class="token operator">|</span>   o- mapped_lun0 <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>lun0 block/iscsi_store <span class="token punctuation">(</span>rw<span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span>     o- luns <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>LUNs: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span>     <span class="token operator">|</span> o- lun0 <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>block/iscsi_store <span class="token punctuation">(</span>/dev/vdb1<span class="token punctuation">)</span> <span class="token punctuation">(</span>default_tg_pt_gp<span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span>     o- portals <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token punctuation">[</span>Portals: <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token operator">|</span>       o- <span class="token number">172.25</span>.250.10:3260 <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+  o- loopback <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>Targets: <span class="token number">0</span><span class="token punctuation">]</span>
+/<span class="token operator">&gt;</span> <span class="token builtin class-name">exit</span>
+
+<span class="token comment"># firewall-cmd --permanent --add-service=iscsi-target</span>
+<span class="token comment"># firewall-cmd --reload</span>
+</pre><h2 class="mume-header" id="10-%E9%85%8D%E7%BD%AEiscsi%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF-chapter-11">10. &#x914D;&#x7F6E;iSCSI&#x7684;&#x5BA2;&#x6237;&#x7AEF;-Chapter 11</h2>
+
+<blockquote>
+<p>&#x914D;&#x7F6E;<code>serverb</code>&#x4F7F;&#x5176;&#x80FD;&#x8FDE;&#x63A5; &#x5728;node1&#x4E0A;&#x63D0;&#x4F9B;&#x7684;<code>iqn.2014-11.com.example:servera</code>&#x5E76;&#x7B26;&#x5408;&#x4EE5;&#x4E0B;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>[ ] iSCSI&#x8BBE;&#x5907;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x7684;&#x671F;&#x95F4;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;</li>
+<li>[ ] &#x5757;&#x8BBE;&#x5907;iSCSI&#x4E0A;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A;<code>2100MiB</code>&#x7684;&#x5206;&#x533A;&#xFF0C;&#x5E76;&#x683C;&#x5F0F;&#x5316;&#x4E3A;<code>ext4</code></li>
+<li>[ ] &#x6B64;&#x5206;&#x533A;&#x6302;&#x8F7D;&#x5728;<code>/mnt/data</code>&#x4E0A;&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x7684;&#x671F;&#x95F4;&#x81EA;&#x52A8;&#x6302;&#x8F7D;</li>
+</ul>
+</blockquote>
+<p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search iscsi</span>
+<span class="token comment"># yum -y install iscsi-initiator-utils</span>
+
+<span class="token comment"># rpm -qc  iscsi-initiator-utils</span>
+/etc/iscsi/iscsid.conf
+<span class="token comment"># vim /etc/iscsi/initiatorname.iscsi</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini"><span class="token key attr-name">Inatialname</span><span class="token punctuation">=</span><span class="token value attr-value">iqn.2014-06.com.example:serverb</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># rpm -ql iscsi-initiator-utils | grep service</span>
+/usr/lib/systemd/system/iscsi-shutdown.service
+/usr/lib/systemd/system/iscsi.service
+/usr/lib/systemd/system/iscsid.service
+<span class="token comment"># systemctl enable --now iscsid</span>
+
+<span class="token comment"># man iscsiadm | grep -A 1 \\-mode</span>
+<span class="token comment"># iscsiadm --mode discoverydb --type sendtargets --portal 172.25.250.10 --discover</span>
+<span class="token number">172.25</span>.250.10:3260,1 iqn.2014-11.com.example:servera
+<span class="token comment"># iscsiadm --mode node --targetname iqn.2014-11.com.example:servera --portal 172.25.250.10:3260 --login</span>
+<span class="token punctuation">..</span>.
+Login to <span class="token punctuation">[</span>iface: default, target: iqn.2014-11.com.example:servera, portal: <span class="token number">172.25</span>.250.10,3260<span class="token punctuation">]</span> successful.
+
+<span class="token comment"># lsblk </span>
+NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda      <span class="token number">8</span>:0    <span class="token number">0</span>   3G  <span class="token number">0</span> disk
+<span class="token punctuation">..</span>.
+
+<span class="token comment"># fdisk /dev/sda</span>
+Command <span class="token punctuation">(</span>m <span class="token keyword keyword-for">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span>n<span class="token variable">`</span></span>
+<span class="token punctuation">..</span>.
+Select <span class="token punctuation">(</span>default p<span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+<span class="token punctuation">..</span>.
+Partition number <span class="token punctuation">(</span><span class="token number">1</span>-4, default <span class="token number">1</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+First sector <span class="token punctuation">(</span><span class="token number">2048</span>-6291455, default <span class="token number">2048</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+Last sector, +sectors or +size<span class="token punctuation">{</span>K,M,G,T,P<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">2048</span>-6291455, default <span class="token number">6291455</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span>+2100M<span class="token variable">`</span></span>
+<span class="token punctuation">..</span>.
+Command <span class="token punctuation">(</span>m <span class="token keyword keyword-for">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span>w<span class="token variable">`</span></span>
+
+<span class="token comment"># mkfs.ext4 /dev/sda1</span>
+<span class="token comment"># blkid /dev/sda1</span>
+/dev/sda1: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;85904e44-4ca9-4ad7-9b7d-587f1996d3df&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;ext4&quot;</span> <span class="token assign-left variable">PARTUUID</span><span class="token operator">=</span><span class="token string">&quot;c9460a37-01&quot;</span>
+
+<span class="token comment"># mkdir /mnt/data</span>
+
+<span class="token comment"># man mount | grep net</span>
+<span class="token comment"># vim /etc/fstab</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+<span class="token key attr-name">UUID</span><span class="token punctuation">=</span><span class="token value attr-value">&quot;85904e44-4ca9-4ad7-9b7d-587f1996d3df&quot; /mnt/data ext4 _netdev 0 0</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># mount -a</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># df -ht ext4</span>
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       <span class="token number">2</span>.0G  <span class="token number">6</span>.2M  <span class="token number">1</span>.9G   <span class="token number">1</span>% /mnt/data
+
+<span class="token comment"># reboot</span>
+<span class="token comment"># df -ht ext4</span>
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       <span class="token number">2</span>.0G  <span class="token number">6</span>.2M  <span class="token number">1</span>.9G   <span class="token number">1</span>% /mnt/data
+</pre><h2 class="mume-header" id="11-%E6%90%AD%E5%BB%BAmariadb-chapter-7">11. &#x642D;&#x5EFA;MariaDB-Chapter 7</h2>
+
+<blockquote>
+<p>&#x5728;<code>servera</code>&#x4E0A;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x4E0B;&#x8FF0;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ul>
+<li>[ ] &#x4EC5;<code>localhost</code> &#x767B;&#x5F55;&#x3002;&#x4F7F;&#x7528;&#x5E10;&#x6237;<code>root</code>&#x3002;&#x5BC6;&#x7801;<code>redhat</code></li>
+<li>[ ] &#x5C06;http://materials/classroom/database-working/inventory.dump&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#xFF0C;&#x5E76;&#x6062;&#x590D;<code>contacts</code> &#x5E93;</li>
+<li>[ ] &#x6309;&#x4EE5;&#x4E0B;&#x8981;&#x6C42;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x8BBF;&#x95EE;&#x7528;&#x6237;<br>
+&#x7528;&#x6237;&#x540D; <code>mary</code>&#xFF0C;&#x5BC6;&#x7801; <code>mary_password</code>&#xFF0C;&#x5BF9; contacts &#x6570;&#x636E;&#x5E93;&#x6240;&#x6709;&#x6570;&#x636E;&#x6709;<code>&#x9009;&#x62E9;</code>&#x6743;&#x9650;</li>
+</ul>
+</blockquote>
+<p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search mariadb</span>
+<span class="token comment"># yum &#x2013;y install mariadb-server mariadb</span>
+
+<span class="token comment"># systemctl enable --now mariadb</span>
+
+<span class="token comment"># mysql_secure_installation</span>
+<span class="token punctuation">..</span>.
+Enter current password <span class="token keyword keyword-for">for</span> root <span class="token punctuation">(</span>enter <span class="token keyword keyword-for">for</span> none<span class="token punctuation">)</span>:
+Set root password? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span> <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+New password: <span class="token variable"><span class="token variable">`</span>redhat<span class="token variable">`</span></span>
+Re-enter new password: <span class="token variable"><span class="token variable">`</span>redhat<span class="token variable">`</span></span>
+Remove anonymous users? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span> <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+Disallow root login remotely? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span> <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+Remove <span class="token builtin class-name">test</span> database and access to it? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span> <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+Reload privilege tables now? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span> <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+<span class="token comment"># netstat -vatnp | grep 3306</span>
+
+<span class="token comment"># vim /etc/my.cnf.d/mariadb-server.cnf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini"><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">mysqld</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">skip-networking</span><span class="token punctuation">=</span><span class="token value attr-value">1</span>
+...
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl restart mariadb</span>
+<span class="token comment"># netstat -vatnp | grep 3306</span>
+
+<span class="token comment"># mysql -u root &#x2013;predhat</span>
+</pre><pre data-role="codeBlock" data-info="sql" class="language-sql">MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-SHOW">SHOW</span> <span class="token keyword keyword-databases">databases</span><span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> HELP <span class="token keyword keyword-create">create</span><span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-database">database</span> contacts<span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> HELP <span class="token keyword keyword-grant">grant</span><span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-USER">USER</span> <span class="token string">&apos;mary&apos;</span><span class="token variable">@&apos;localhost&apos;</span> IDENTIFIED <span class="token keyword keyword-BY">BY</span> <span class="token string">&apos;mary_password&apos;</span><span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-GRANT">GRANT</span> <span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-ON">ON</span> mariadb<span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword keyword-TO">TO</span> <span class="token string">&apos;mary&apos;</span><span class="token variable">@&apos;localhost&apos;</span><span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>Ctrl<span class="token operator">-</span>D<span class="token operator">&gt;</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># wget http://materials/classroom/database-working/inventory.dump</span>
+<span class="token comment"># mysql -u root -predhat contacts &lt; inventory.dump</span>
+
+<span class="token comment"># mysql -u mary -pmary_password contacts</span>
+</pre><pre data-role="codeBlock" data-info="sql" class="language-sql">MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-SHOW">SHOW</span> <span class="token keyword keyword-tables">tables</span><span class="token punctuation">;</span>
+</pre><h2 class="mume-header" id="12-%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E5%A1%AB%E7%A9%BA1-chapter7">12. &#x6570;&#x636E;&#x67E5;&#x8BE2;&#x586B;&#x7A7A;1-Chapter7</h2>
+
+<blockquote>
+<p>&#x5B8C;&#x6210;&#x4EE5;&#x4E0B;&#x8981;&#x6C42;&#x7684;&#x67E5;&#x8BE2;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x586B;&#x5165;&#x76F8;&#x5E94;&#x7684;&#x6846;&#x683C;&#x4E2D;&#x3002;</p>
+<ul>
+<li>[ ] &#x67E5;&#x8BE2;<code>RT-AC68U</code>&#x4EA7;&#x54C1;&#x7684;&#x4F9B;&#x5E94;&#x5546;&#x540D;&#x79F0;&#x4E3A;_______________________________</li>
+</ul>
+</blockquote>
+<p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql">MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> help <span class="token keyword keyword-select">select</span><span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-show">show</span> <span class="token keyword keyword-tables">tables</span><span class="token punctuation">;</span>
+
+MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> product<span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> category<span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> manufacturer<span class="token punctuation">;</span>
+
+MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-SELECT">SELECT</span> manufacturer<span class="token punctuation">.</span>name 
+<span class="token keyword keyword-FROM">FROM</span> product<span class="token punctuation">,</span> manufacturer 
+<span class="token keyword keyword-WHERE">WHERE</span> id_manufacturer<span class="token operator">=</span>manufacturer<span class="token punctuation">.</span>id
+ <span class="token operator">AND</span> product<span class="token punctuation">.</span>name<span class="token operator">=</span><span class="token string">&quot;RT-AC68U&quot;</span><span class="token punctuation">;</span>
+</pre><h2 class="mume-header" id="13-%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E5%A1%AB%E7%A9%BA2-chapter7">13. &#x6570;&#x636E;&#x67E5;&#x8BE2;&#x586B;&#x7A7A;2-Chapter7</h2>
+
+<blockquote>
+<p>&#x5B8C;&#x6210;&#x4EE5;&#x4E0B;&#x8981;&#x6C42;&#x7684;&#x67E5;&#x8BE2;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x586B;&#x5165;&#x76F8;&#x5E94;&#x7684;&#x6846;&#x683C;&#x4E2D;&#x3002;</p>
+<ul>
+<li>[ ] &#x67E5;&#x8BE2;&#x7C7B;&#x578B;&#x662F;<code>Servers</code>&#xFF0C;&#x4E14;&#x4F9B;&#x5E94;&#x5546;&#x662F;<code>Lenovo</code>&#x7684;&#x4EA7;&#x54C1;&#x6709;&#x591A;&#x5C11;_______________________________</li>
+</ul>
+</blockquote>
+<p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql">MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token keyword keyword-SELECT">SELECT</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> 
+	<span class="token keyword keyword-FROM">FROM</span> category<span class="token punctuation">,</span> manufacturer<span class="token punctuation">,</span> product
+	<span class="token keyword keyword-WHERE">WHERE</span> category<span class="token punctuation">.</span>id<span class="token operator">=</span>product<span class="token punctuation">.</span>id_category
+ 		<span class="token operator">AND</span> manufacturer<span class="token punctuation">.</span>id<span class="token operator">=</span>product<span class="token punctuation">.</span>id_manufacturer
+ 		<span class="token operator">AND</span> category<span class="token punctuation">.</span>name<span class="token operator">=</span><span class="token string">&quot;Servers&quot;</span>
+ 		<span class="token operator">AND</span> manufacturer<span class="token punctuation">.</span>name<span class="token operator">=</span><span class="token string">&quot;Lenovo&quot;</span><span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span>contacts<span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>Ctrl<span class="token operator">-</span>D<span class="token operator">&gt;</span>
+</pre><h2 class="mume-header" id="14-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAweb%E6%9C%8D%E5%8A%A1%E5%99%A8-chapter9">14. &#x5B9E;&#x73B0;&#x4E00;&#x4E2A;web&#x670D;&#x52A1;&#x5668;-Chapter9</h2>
+
+<blockquote>
+<p>&#x5728;<code>servera</code>&#x4E0A;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x7AD9;&#x70B9;http://www0.lab.example.com&#x7136;&#x540E;&#x6267;&#x884C;&#x4E0B;&#x8FF0;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ul>
+<li>[ ] &#x4ECE;http://materials/www0.html&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</li>
+<li>[ ] &#x5E76;&#x4E14;&#x5C06;&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;&#x4E3A;<code>index.html</code>&#x4E0D;&#x8981;&#x4FEE;&#x6539;&#x6B64;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;</li>
+<li>[ ] &#x5C06;&#x6587;&#x4EF6;<code>index.html</code>&#x62F7;&#x8D1D;&#x5230;&#x60A8;&#x7684;web&#x670D;&#x52A1;&#x5668;&#x7684;<code>DocumentRoot</code>&#x76EE;&#x5F55;&#x4E0B;</li>
+<li>[ ] &#x6765;&#x81EA;&#x4E8E;<code>lab.example.com</code>&#x57DF;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x6B64;web&#x670D;&#x52A1;</li>
+<li>[ ] &#x6765;&#x81EA;&#x4E8E;<code>lab.example.org</code>&#x57DF;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x62D2;&#x7EDD;&#x8BBF;&#x95EE;&#x6B64;Web&#x670D;&#x52A1;</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-bastion
+<span class="token comment">#16 virtual host</span>
+<span class="token function">cat</span> <span class="token operator">&gt;</span> /etc/dnsmasq.d/cname-create.conf <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+cname=www0.lab.example.com,servera.lab.example.com
+cname=www0,servera.lab.example.com
+EOF</span>
+systemctl restart dnsmasq
+<span class="token comment">#14 http</span>
+<span class="token builtin class-name">echo</span> www0 <span class="token operator">&gt;</span> /content/courses/rh358/rhel8.1/materials/www0.html
+<span class="token comment">#16 virtual host</span>
+<span class="token builtin class-name">echo</span> webapp0 <span class="token operator">&gt;</span> /content/courses/rh358/rhel8.1/materials/webapp0.html
+<span class="token comment">#</span>
+<span class="token builtin class-name">echo</span> permission <span class="token operator">&gt;</span> /content/courses/rh358/rhel8.1/materials/permission.html
+-servera
+<span class="token function">ping</span> -c <span class="token number">4</span> www0
+
+-foundation
+<span class="token function">sed</span> -i <span class="token string">&apos;/servera/s/$/ www0.lab.example.com webapp0.lab.example.com/&apos;</span> /etc/hosts
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search http | grep ^http</span>
+<span class="token comment"># yum -y install httpd httpd-manual</span>
+
+<span class="token comment"># rpm -ql httpd | grep vhost</span>
+<span class="token comment"># cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/httpd-vhosts.conf</span>
+
+<span class="token comment"># wget -O /var/www/html/index.html http://materials/www0.html</span>
+
+<span class="token comment"># rpm -ql httpd-manual | grep upg</span>
+<span class="token comment"># firefox /usr/share/httpd/manual/upgrading.html &amp;</span>
+
+<span class="token comment"># vim /etc/httpd/conf.d/httpd-vhosts.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">&lt;VirtualHost *:80&gt;
+     DocumentRoot &quot;/var/www/html&quot;
+     ServerName www0.lab.example.com
+&lt;/VirtualHost&gt;
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl enable --now httpd</span>
+
+<span class="token comment"># firewall-cmd --permanent --add-service=http</span>
+<span class="token comment"># firewall-cmd &#x2013;reload</span>
+</pre><p><strong>[kiosk@foundation]</strong></p>
+<blockquote>
+<p><code>firefox</code> <a href="http://www0.lab.example.com/manual">http://www0.lab.example.com/manual</a></p>
+</blockquote>
+<p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># vim /etc/httpd/conf/httpd.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+&lt;Directory &quot;/var/www/html&quot;&gt;
+...
+    <span class="token comment">#Require all granted</span>
+    &lt;RequireAll&gt;
+        Require host lab.example.com
+        Require not host lab.example.org
+    &lt;/RequireAll&gt;
+...
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl restart httpd</span>
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># curl http://www0.lab.example.com</span>
+www0
+</pre><h2 class="mume-header" id="15-%E9%85%8D%E7%BD%AE%E5%AE%89%E5%85%A8web%E6%9C%8D%E5%8A%A1-chapter8">15. &#x914D;&#x7F6E;&#x5B89;&#x5168;web&#x670D;&#x52A1;-Chapter8</h2>
+
+<blockquote>
+<p>&#x7AD9;&#x70B9;http://www0.lab.example.com&#x914D;&#x7F6E;TLS&#x52A0;&#x5BC6;</p>
+<ul>
+<li>[ ] &#x4E00;&#x4E2A;&#x5DF2;&#x7B7E;&#x540D;&#x8BC1;&#x4E66;&#x4ECE;http://materials/www0.lab.example.com.crt&#x83B7;&#x53D6;</li>
+<li>[ ] &#x6B64;&#x8BC1;&#x4E66;&#x7684;&#x5BC6;&#x94A5;&#x4ECE;http://materials/www0.lab.example.com.key&#x83B7;&#x53D6;</li>
+<li>[ ] &#x6B64;&#x8BC1;&#x4E66;&#x7684;&#x7B7E;&#x540D;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x4ECE;http://masterials/example-ca.crt&#x83B7;&#x53D6;</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-foundation<span class="token comment">#</span>
+<span class="token assign-left variable">CADIR</span><span class="token operator">=</span>/etc/pki/CA
+<span class="token assign-left variable">SUBJ_PREFIX</span><span class="token operator">=</span><span class="token string">&quot;/C=US/ST=North Carolina/L=Raleigh/O=Example, Inc.&quot;</span>
+<span class="token function">mkdir</span> -p <span class="token string">&quot;<span class="token variable">${CADIR}</span>&quot;</span>/<span class="token punctuation">{</span>certs,crl,newcerts,csr<span class="token punctuation">}</span>
+<span class="token function">mkdir</span> -p -m 0700 <span class="token string">&quot;<span class="token variable">${CADIR}</span>/private&quot;</span>
+<span class="token function">touch</span> <span class="token string">&quot;<span class="token variable">${CADIR}</span>/index.txt&quot;</span>
+<span class="token builtin class-name">echo</span> 01 <span class="token operator">&gt;</span> <span class="token string">&quot;<span class="token variable">${CADIR}</span>/serial&quot;</span>
+openssl req -days <span class="token number">365</span> -new -x509 -nodes -out <span class="token string">&quot;<span class="token variable">${CADIR}</span>/cacert.pem&quot;</span> -keyout <span class="token string">&quot;<span class="token variable">${CADIR}</span>/private/cakey.pem&quot;</span> -subj <span class="token string">&quot;<span class="token variable">${SUBJ_PREFIX}</span>/CN=example.com Certificate Authority&quot;</span>
+<span class="token function">ln</span> -s <span class="token string">&quot;<span class="token variable">${CADIR}</span>/cacert.pem&quot;</span> <span class="token string">&quot;<span class="token variable">${CADIR}</span>/example-ca.crt&quot;</span>
+<span class="token assign-left variable">CN</span><span class="token operator">=</span>www0.lab.example.com
+openssl req -new -nodes -out <span class="token string">&quot;<span class="token variable">${CADIR}</span>/csr/<span class="token variable">${CN}</span>.csr&quot;</span> <span class="token punctuation">\</span>
+  -keyout <span class="token string">&quot;<span class="token variable">${CADIR}</span>/private/<span class="token variable">${CN}</span>.key&quot;</span> -subj <span class="token string">&quot;<span class="token variable">${SUBJ_PREFIX}</span>/CN=<span class="token variable">${CN}</span>&quot;</span>
+openssl ca -batch -days <span class="token number">180</span> -in <span class="token string">&quot;<span class="token variable">${CADIR}</span>/csr/<span class="token variable">${CN}</span>.csr&quot;</span> <span class="token punctuation">\</span>
+  -out <span class="token string">&quot;<span class="token variable">${CADIR}</span>/certs/<span class="token variable">${CN}</span>.crt&quot;</span> -policy policy_anything
+<span class="token function">cp</span> /etc/pki/CA/example-ca.crt /etc/pki/CA/certs/<span class="token variable">${CN}</span>.crt /etc/pki/CA/private/<span class="token variable">${CN}</span>.key /content/courses/rh358/rhel8.1/materials/
+<span class="token function">chmod</span> +r /content/courses/rh358/rhel8.1/materials/www0.lab.example.com.key
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum search ssl</span>
+<span class="token comment"># yum -y install mod_ssl</span>
+
+<span class="token comment"># rpm -qc mod_ssl</span>
+<span class="token comment"># grep Chain /etc/httpd/conf.d/ssl.conf</span>
+<span class="token comment">#SSLCertificateChainFile /etc/pki/tls/certs/server-chain.crt</span>
+<span class="token comment"># grep localhost /etc/httpd/conf.d/ssl.conf</span>
+SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+
+<span class="token comment"># wget -P /etc/pki/tls/certs/ http://materials/example-ca.crt</span>
+<span class="token comment"># wget -P /etc/pki/tls/certs/ http://materials/www0.lab.example.com.crt</span>
+<span class="token comment"># wget -P /etc/pki/tls/private/ http://materials/www0.lab.example.com.key</span>
+
+<span class="token comment"># vim /etc/httpd/conf.d/ssl.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+&lt;VirtualHost _default_:443&gt;
+DocumentRoot &quot;/var/www/html&quot;
+ServerName www0.lab.example.com
+...
+SSLCertificateFile /etc/pki/tls/certs/www0.lab.example.com.crt
+SSLCertificateKeyFile /etc/pki/tls/private/www0.lab.example.com.key
+SSLCertificateChainFile /etc/pki/tls/certs/example-ca.crt
+...
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl restart httpd</span>
+
+<span class="token comment"># firewall-cmd --permanent --add-service=https</span>
+<span class="token comment"># firewall-cmd &#x2013;reload</span>
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># curl http://www0.lab.example.com</span>
+www0
+<span class="token comment"># curl -k https://www0.lab.example.com</span>
+www0
+</pre><h2 class="mume-header" id="16-%E9%85%8D%E7%BD%AE%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA-chapter8">16. &#x914D;&#x7F6E;&#x865A;&#x62DF;&#x4E3B;&#x673A;-Chapter8</h2>
+
+<blockquote>
+<p>&#x5728;<code>servera</code>&#x4E0A;&#x6269;&#x5C55;&#x60A8;&#x7684;web&#x670D;&#x52A1;&#x5668;&#xFF0C;<br>
+&#x4E3A;&#x7AD9;&#x70B9;http://webapp0.lab.example.com&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x4E0B;&#x8FF0;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ul>
+<li>[ ] &#x8BBE;&#x7F6E;DocumentRoot&#x4E3A;<code>/var/www/virtual</code></li>
+<li>[ ] &#x4ECE;http://materials/webapp0.html&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</li>
+<li>[ ] &#x5E76;&#x91CD;&#x547D;&#x540D;&#x4E3A;<code>index.html</code>&#x4E0D;&#x8981;&#x5BF9;&#x6587;&#x4EF6;index.html&#x7684;&#x5185;&#x5BB9;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;</li>
+<li>[ ] &#x5C06;&#x6587;&#x4EF6;index.html&#x653E;&#x5230;&#x865A;&#x62DF;&#x673A;&#x7684;DocumentRoot&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x786E;&#x4FDD;<code>floyd</code>&#x7528;&#x6237;&#x80FD;&#x591F;&#x5728;/var/www/virtual&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x6587;&#x4EF6;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x539F;&#x59CB;&#x7AD9;&#x70B9;http://www0.lab.example.com&#x5FC5;&#x987B;&#x4ECD;&#x7136;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#xFF0C;<br>
+&#x540D;&#x79F0;&#x670D;&#x52A1;&#x5668; <a href="http://bastion.lab.example.com">bastion.lab.example.com</a> &#x63D0;&#x4F9B;&#x5BF9;&#x4E3B;&#x673A;&#x540D; <a href="http://webapp0.lab.exmple.com">webapp0.lab.exmple.com</a> &#x7684;&#x57DF;&#x540D;&#x89E3;&#x6790;</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-bastion
+<span class="token comment">#16 virtual host</span>
+<span class="token function">cat</span> <span class="token operator">&gt;&gt;</span> /etc/dnsmasq.d/cname-create.conf <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+cname=webapp0.lab.example.com,servera.lab.example.com
+cname=webapp0,servera.lab.example.com
+EOF</span>
+systemctl restart dnsmasq
+
+-servera
+<span class="token function">useradd</span> floyd
+<span class="token function">ping</span> -c <span class="token number">4</span> webapp0
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># mkdir /var/www/virtual</span>
+
+<span class="token comment"># wget -O /var/www/virtual/index.html http://materials/webapp0.html</span>
+
+<span class="token comment"># id floyd</span>
+<span class="token comment"># chown floyd /var/www/virtual</span>
+
+<span class="token comment"># vim /etc/httpd/conf.d/httpd-vhosts.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+&lt;VirtualHost *:80&gt;
+     DocumentRoot &quot;/var/www/virtual&quot;
+     ServerName webapp0.lab.example.com
+&lt;/VirtualHost&gt;
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl restart httpd</span>
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># curl http://www0.lab.example.com</span>
+www0
+<span class="token comment"># curl http://webapp0.lab.example.com</span>
+webapp0
+<span class="token comment"># curl &#x2013;k https://www0.example.com</span>
+www0
+</pre><h2 class="mume-header" id="17-%E9%85%8D%E7%BD%AEweb%E5%86%85%E5%AE%B9%E7%9A%84%E8%AE%BF%E9%97%AE-chapter8">17. &#x914D;&#x7F6E;web&#x5185;&#x5BB9;&#x7684;&#x8BBF;&#x95EE;-Chapter8</h2>
+
+<blockquote>
+<p>&#x5728;&#x60A8;&#x7684;<code>servera</code>&#x4E0A;&#x7684;web&#x670D;&#x52A1;&#x5668;&#x7684;DocumentRoot&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>private</code>&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x8981;&#x6C42;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>[ ] &#x4ECE;http://materials/permission.html&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x526F;&#x672C;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x4E14;&#x91CD;&#x547D;&#x540D;&#x4E3A;<code>index.html</code></li>
+<li>[ ] &#x4E0D;&#x8981;&#x5BF9;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;</li>
+<li>[ ] &#x4ECE; <code>servera</code> &#x4E0A;&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x6D4F;&#x89C8;<code>private</code>&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F46;&#x662F;&#x4ECE;&#x5176;&#x5B83;&#x7CFB;&#x7EDF;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x5185;&#x5BB9;</li>
+</ul>
+</blockquote>
+<p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># mkdir /var/www/{html,virtual}/private</span>
+<span class="token comment"># tree /var/www/{html,virtual}</span>
+
+<span class="token comment"># wget -O /var/www/html/private/index.html http://materials/permission.html</span>
+<span class="token comment"># wget -O /var/www/virtual/private/index.html http://materials/permission.html</span>
+
+<span class="token comment"># vim /etc/httpd/conf/httpd.conf</span>
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+&lt;Directory &quot;/var/www/html/private&quot;&gt;
+    Require host servera.lab.example.com
+&lt;/Directory&gt;
+&lt;Directory &quot;/var/www/virtual/private&quot;&gt;
+    Require host servera.lab.example.com
+&lt;/Directory&gt;
+&lt;Directory &quot;/var/www&quot;&gt;
+...
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># systemctl restart httpd</span>
+
+<span class="token comment"># curl http://www0.lab.example.com/private/</span>
+permission
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># curl http://www0.lab.example.com</span>
+www0
+<span class="token comment"># curl -k https://www0.lab.example.com</span>
+www0
+<span class="token comment"># curl http://webapp0.lab.example.com</span>
+webapp0
+
+<span class="token comment"># curl http://www0.lab.example.com/private/</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE HTML PUBLIC <span class="token string">&quot;-//IETF//DTD HTML 2.0//EN&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span><span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token number">403</span> Forbidden<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span><span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>Forbidden<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>
+<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>You don&apos;t have permission to access /private/
+on this server.<span class="token operator">&lt;</span>br /<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/body<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/html<span class="token operator">&gt;</span>
+</pre><h2 class="mume-header" id="18-%E9%80%9A%E8%BF%87-ansible-%E5%B8%83%E7%BD%B2-nginx---chapter8">18. &#x901A;&#x8FC7; ansible &#x5E03;&#x7F72; Nginx - Chapter8</h2>
+
+<blockquote>
+<p>&#x5728;<code>serverc</code>&#x548C;<code>serverd</code>&#x4E0A;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x7AD9;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x4E0B;&#x8FF0;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ul>
+<li>[ ] &#x521B;&#x5EFA;&#x5267;&#x672C;<code>nginx.yml</code></li>
+<li>[ ] &#x4ECE;http://materials/nginx.html&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</li>
+<li>[ ] &#x5E76;&#x4E14;&#x5C06;&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;&#x4E3A;<code>index.html</code>&#x4E0D;&#x8981;&#x4FEE;&#x6539;&#x6B64;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;</li>
+<li>[ ] &#x5C06;&#x6587;&#x4EF6;<code>index.html</code>&#x62F7;&#x8D1D;&#x5230;&#x60A8;&#x7684;web&#x670D;&#x52A1;&#x5668;&#x7684;<code>DocumentRoot</code>&#x76EE;&#x5F55;&#x4E0B;</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">-foundation
+<span class="token builtin class-name">echo</span> nginx <span class="token operator">&gt;</span> /content/courses/rh358/rhel8.1/materials/nginx.html
+
+<span class="token comment">#### template j2</span>
+</pre><p><strong>[student@workstation]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># vim nginx.yml</span>
+</pre><pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">---</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+  <span class="token key atrule">hosts</span><span class="token punctuation">:</span> serverc<span class="token punctuation">,</span>serverd
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> install the latest version
+    <span class="token key atrule">yum</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> latest
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Ensure1 
+    <span class="token key atrule">lineinfile</span><span class="token punctuation">:</span>
+      <span class="token key atrule">path</span><span class="token punctuation">:</span> /etc/nginx/nginx.conf
+      <span class="token key atrule">regexp</span><span class="token punctuation">:</span> <span class="token string">&apos;^\ .*server_name&apos;</span>
+      <span class="token key atrule">line</span><span class="token punctuation">:</span> <span class="token string">&quot;        server_name  {{ ansible_fqdn }};&quot;</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Start service httpd<span class="token punctuation">,</span> if not started
+    <span class="token key atrule">service</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> started
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> yes 
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Download 
+    <span class="token key atrule">get_url</span><span class="token punctuation">:</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//materials/nginx.html
+      <span class="token key atrule">dest</span><span class="token punctuation">:</span> /usr/share/nginx/html/
+  <span class="token punctuation">-</span> <span class="token key atrule">firewalld</span><span class="token punctuation">:</span>
+      <span class="token key atrule">service</span><span class="token punctuation">:</span> http
+      <span class="token key atrule">permanent</span><span class="token punctuation">:</span> yes 
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> enabled
+      <span class="token key atrule">immediate</span><span class="token punctuation">:</span> yes 
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible-playbook nginx.yml
+</pre><p><strong>[root@serverb]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># curl http://serverc.lab.example.com</span>
+nginx
+<span class="token comment"># curl http://serverd.lab.example.com</span>
+nginx
+</pre><h2 class="mume-header" id="19-%E9%80%9A%E8%BF%87-ansible-%E9%85%8D%E7%BD%AE-firewall">19. &#x901A;&#x8FC7; ansible &#x914D;&#x7F6E; firewall</h2>
+
+<blockquote>
+<p>&#x5728; <code>serverc</code> &#x548C; <code>serverd</code> &#x4E0A;&#x5206;&#x522B;&#x8BBE;&#x7F6E;&#xFF0C;&#x9488;&#x5BF9;SSH</p>
+<ul>
+<li>
+<p>[ ] &#x5728;<code>playbooks</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x521B;&#x5EFA;&#x5267;&#x672C;<code>firewall.yml</code></p>
+</li>
+<li>
+<p>[ ] &#x5141;&#x8BB8;<code>172.25.250.0/24</code> &#x7684;&#x57DF;&#x5BF9; serverc &#x548C; serverd &#x8FDB;&#x884C;<code>SSH</code></p>
+</li>
+<li>
+<p>[ ] &#x7981;&#x6B62;<code>172.24.250.0/24</code> &#x7684;&#x57DF;&#x5BF9; serverc &#x548C; serverd &#x8FDB;&#x884C;<code>SSH</code></p>
+</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info class="language-"><code>-foundation
+classroom, bastion, workstation, serverc, serverd
+</code></pre><p><strong>[devops@workstation]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">$ <span class="token function">mkdir</span> playbooks
+$ <span class="token builtin class-name">cd</span> playbooks
+
+$ <span class="token function">rpm</span> -qc ansible
+$ <span class="token function">cp</span> /etc/ansible/ansible.cfg <span class="token builtin class-name">.</span>
+$ <span class="token function">vim</span> ansible.cfg
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">...
+<span class="token key attr-name">inventory</span><span class="token punctuation">=</span><span class="token value attr-value">/home/devops/playbooks/inventory</span>
+<span class="token key attr-name">host_key_checking</span> <span class="token punctuation">=</span> <span class="token value attr-value">False</span>
+...
+<span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">privilege_escalation</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">become</span><span class="token punctuation">=</span><span class="token value attr-value">True</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ <span class="token function">vim</span> inentory
+</pre><pre data-role="codeBlock" data-info="ini" class="language-ini">serverc
+serverd
+
+<span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">all:vars</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">ansible_password</span><span class="token punctuation">=</span><span class="token value attr-value">redhat</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible --version
+config <span class="token function">file</span> <span class="token operator">=</span> /home/devops/playbooks/ansible.cfg
+<span class="token punctuation">..</span>.
+$ ansible-inventory --graph
+@all:
+  <span class="token operator">|</span>--@ungrouped:
+  <span class="token operator">|</span>  <span class="token operator">|</span>--serverc
+  <span class="token operator">|</span>  <span class="token operator">|</span>--serverd
+$ ansible all -a <span class="token function">whoami</span>
+serverc <span class="token operator">|</span> CHANGED <span class="token operator">|</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span> <span class="token operator">&gt;&gt;</span>
+root
+serverd <span class="token operator">|</span> CHANGED <span class="token operator">|</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span> <span class="token operator">&gt;&gt;</span>
+root
+
+$ ansible-doc -l <span class="token operator">|</span> <span class="token function">grep</span> fire
+$ ansible-doc firewalld
+https://docs.ansible.com/ansible/2.9/reference_appendices/playbooks_keywords.html
+
+$ <span class="token builtin class-name">echo</span> <span class="token builtin class-name">set</span> number <span class="token assign-left variable">ts</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">sw</span><span class="token operator">=</span><span class="token number">2</span> et <span class="token operator">&gt;</span> ~/.vimrc
+$ <span class="token function">vim</span> firewall.yml
+</pre><pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">---</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> firewall
+  <span class="token key atrule">hosts</span><span class="token punctuation">:</span> serverc<span class="token punctuation">,</span> serverd
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">firewalld</span><span class="token punctuation">:</span>
+      <span class="token key atrule">rich_rule</span><span class="token punctuation">:</span> rule family=&quot;ipv4&quot; source address=&quot;172.25.250.0/24&quot; service name=&quot;ssh&quot; accept
+      <span class="token key atrule">permanent</span><span class="token punctuation">:</span> yes
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> enabled
+      <span class="token key atrule">immediate</span><span class="token punctuation">:</span> yes
+  <span class="token punctuation">-</span> <span class="token key atrule">firewalld</span><span class="token punctuation">:</span>
+      <span class="token key atrule">rich_rule</span><span class="token punctuation">:</span> rule family=&quot;ipv4&quot; source address=&quot;172.24.250.0/24&quot; service name=&quot;ssh&quot; reject
+      <span class="token key atrule">permanent</span><span class="token punctuation">:</span> yes
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> enabled
+      <span class="token key atrule">immediate</span><span class="token punctuation">:</span> yes
+  <span class="token punctuation">-</span> <span class="token key atrule">firewalld</span><span class="token punctuation">:</span>
+      <span class="token key atrule">service</span><span class="token punctuation">:</span> ssh
+      <span class="token key atrule">permanent</span><span class="token punctuation">:</span> yes
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> disabled
+      <span class="token key atrule">immediate</span><span class="token punctuation">:</span> yes
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible-playbook firewall.yml
+<span class="token punctuation">..</span>.
+PLAY RECAP ************************************************************************************
+serverc <span class="token builtin class-name">:</span> <span class="token assign-left variable">ok</span><span class="token operator">=</span><span class="token number">3</span> <span class="token assign-left variable">changed</span><span class="token operator">=</span><span class="token number">3</span>    <span class="token assign-left variable">unreachable</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">failed</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">skipped</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">rescued</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ignored</span><span class="token operator">=</span><span class="token number">0</span>
+serverd <span class="token builtin class-name">:</span> <span class="token assign-left variable">ok</span><span class="token operator">=</span><span class="token number">3</span> <span class="token assign-left variable">changed</span><span class="token operator">=</span><span class="token number">3</span>    <span class="token assign-left variable">unreachable</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">failed</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">skipped</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">rescued</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ignored</span><span class="token operator">=</span><span class="token number">0</span>
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible serverc,serverd -a <span class="token string">&apos;firewall-cmd --list-all&apos;</span>
+serverc <span class="token operator">|</span> CHANGED <span class="token operator">|</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span> <span class="token operator">&gt;&gt;</span>
+public <span class="token punctuation">(</span>active<span class="token punctuation">)</span>
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: cockpit dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv4&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;172.25.250.0/24&quot;</span> <span class="token function">service</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;ssh&quot;</span> accept
+	rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv4&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;172.24.250.0/24&quot;</span> <span class="token function">service</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;ssh&quot;</span> reject
+<span class="token punctuation">..</span>.
+</pre><h2 class="mume-header" id="20-%E9%80%9A%E8%BF%87-ansible-%E9%85%8D%E7%BD%AE%E7%A9%BA%E9%82%AE%E4%BB%B6%E5%AE%A2%E6%88%B7%E7%AB%AFanisble---chapter6">20. &#x901A;&#x8FC7; ansible &#x914D;&#x7F6E;&#x7A7A;&#x90AE;&#x4EF6;&#x5BA2;&#x6237;&#x7AEF;(anisble) - Chapter6</h2>
+
+<blockquote>
+<p>&#x5728;&#x7CFB;&#x7EDF; <code>serverc</code> &#x548C; <code>serverd</code> &#x4E0A;&#x914D;&#x7F6E;&#x90AE;&#x4EF6;&#x670D;&#x52A1;&#xFF0C;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>
+<p>[ ] &#x5728;<code>smtp-auto</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x521B;&#x5EFA;&#x5267;&#x672C;<code>nullclients.yml</code></p>
+</li>
+<li>
+<p>[ ] &#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x4E0D;&#x80FD;&#x63A5;&#x6536;&#x5916;&#x90E8;&#x53D1;&#x9001;&#x6765;&#x7684;&#x90AE;&#x4EF6;</p>
+</li>
+<li>
+<p>[ ] &#x5728;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x4E0A;&#x672C;&#x5730;&#x53D1;&#x9001;&#x7684;&#x4EFB;&#x4F55;&#x90AE;&#x4EF6;&#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x8DEF;&#x7531;&#x5230;<code>smtp.lab.example.com</code></p>
+</li>
+<li>
+<p>[ ] &#x4ECE;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x4E0A;&#x53D1;&#x9001;&#x7684;&#x90AE;&#x4EF6;&#x663E;&#x793A;&#x6765;&#x81EA;&#x4E8E;<code>lab.example.com</code></p>
+</li>
+<li>
+<p>[ ] &#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x7528;&#x6237;<code>student</code>&#x6765;&#x6D4B;&#x8BD5;&#x60A8;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x7CFB;&#x7EDF;<code>smtp.lab.example.com</code> &#x5DF2;&#x7ECF;&#x914D;&#x7F6E;</p>
+</li>
+<li>
+<p>[ ] &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x7F51;&#x5740;&#x6D4B;&#x8BD5;<code>http://bastion/mail</code></p>
+</li>
+</ul>
+</blockquote>
+<div style="background: #f0f0f0; padding: 12px; line-height: 24px; margin-bottom: 24px;">
+<dt style="background: #ee0000; padding: 6px 12px; font-weight: bold; display: block; color: #fff; margin: -12px; margin-bottom: -12px; margin-bottom: 12px;">Important - &#x91CD;&#x8981;</dt>
+&#x4E0D;&#x8981;&#x592A;&#x76F8;&#x4FE1; README
+</div>
+```bash
+yum-classroom
+relayhost-bastion
+# setenforce 0
+# ln -s /var/spool/mail /var/www/html/mail
+manage-servera,serverb,serverc,serverd
+ansible-workstaion
+$ lab smtp-automation start
+<pre data-role="codeBlock" data-info class="language-"><code>**[student@workstation]**
+
+```bash
+$ yum search mail | grep -i M.*T.*A
+...
+`postfix.x86_64` : Postfix Mail Transport Agent
+
+$ yum search role
+$ yum -y install rhel-system-roles.noarch
+$ ansible-galaxy list
+...
+- `rhel-system-roles.postfix`, (unknown version)
+
+$ rpm -ql rhel-system-roles | grep postfix
+...
+/usr/share/doc/rhel-system-roles/postfix/README.md
+
+$ vim /usr/share/doc/rhel-system-roles/postfix/README.md
+
+$ ssh root@serverc &quot;
+yum -y install postfix
+postconf | egrep &apos;^mynetworks |^inet.*int&apos;
+postconf | egrep &apos;^relayh|^mydes&apos;
+postconf | grep ^myori
+&quot;
+1b inet_interfaces = localhost
+1b mynetworks = 127.0.0.1/32 [::1]/128
+1a inet_interfaces = loopback-only
+1a mynetworks = 127.0.0.0/8, [::1]/128
+2b mydestination = $myhostname, localhost.$mydomain, localhost
+2b relayhost =
+2a mydestination =
+2a relayhost = [smtp.lab.example.com]
+3b myorigin = $myhostname
+3a myorigin = lab.example.com
+
+$ cd smtp-auto
+$ vim inventory
+serverc
+serverd
+
+$ vim nullclients.yml
+</code></pre><pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">---</span>
+<span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> serverc<span class="token punctuation">,</span>serverd
+  <span class="token key atrule">vars</span><span class="token punctuation">:</span>
+    <span class="token key atrule">postfix_conf</span><span class="token punctuation">:</span>
+      <span class="token key atrule">inet_interfaces</span><span class="token punctuation">:</span> <span class="token string">&quot;loopback-only&quot;</span>
+			<span class="token key atrule">mynetworks</span><span class="token punctuation">:</span> <span class="token string">&quot;127.0.0.0/8, [::1]/128&quot;</span>
+			<span class="token key atrule">relayhost</span><span class="token punctuation">:</span> <span class="token string">&quot;[smtp.lab.example.com]&quot;</span>
+			<span class="token key atrule">mydestination</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+			<span class="token key atrule">myorigin</span><span class="token punctuation">:</span> <span class="token string">&quot;lab.example.com&quot;</span>
+  <span class="token key atrule">roles</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> linux<span class="token punctuation">-</span>system<span class="token punctuation">-</span>roles.postfix
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible-playbook nullclients.yml
+</pre><p><strong>[root@server{c..d}]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># echo nr2 | mail -s local student</span>
+<span class="token comment"># echo nr2 | mail -s domain student@lab.example.com</span>
+
+<span class="token comment"># mutt -f imaps://imap.lab.example.com</span>
+/home/student/Mail does not exist. Create it? <span class="token punctuation">(</span><span class="token punctuation">[</span>yes<span class="token punctuation">]</span>/no<span class="token punctuation">)</span>: <span class="token variable"><span class="token variable">`</span><span class="token operator">&lt;</span>Enter<span class="token operator">&gt;</span><span class="token variable">`</span></span>
+<span class="token punctuation">(</span>r<span class="token punctuation">)</span>eject, accept <span class="token punctuation">(</span>o<span class="token punctuation">)</span>nce, <span class="token punctuation">(</span>a<span class="token punctuation">)</span>ccept always <span class="token variable"><span class="token variable">`</span>a<span class="token variable">`</span></span>
+Username at imap.lab.example.com: <span class="token variable"><span class="token variable">`</span>student<span class="token variable">`</span></span>
+Password <span class="token keyword keyword-for">for</span> tom@imap.lab.example.com: <span class="token variable"><span class="token variable">`</span>student<span class="token variable">`</span></span>
+</pre><blockquote>
+<p><code>firefox http://bastion/mail</code></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">Name	Last modified	Size	Description
+	<span class="token punctuation">..</span>.
+	<span class="token variable"><span class="token variable">`</span>student<span class="token variable">`</span></span> 	<span class="token number">2021</span>-08-01 <span class="token number">11</span>:09 	<span class="token variable"><span class="token variable">`</span><span class="token number">6</span>.9K<span class="token variable">`</span></span>
+</pre></blockquote>
+<h2 class="mume-header" id="21-%E9%80%9A%E8%BF%87-ansible-%E5%B8%83%E7%BD%B2%E6%89%93%E5%8D%B0%E6%9C%BA-chapter5">21. &#x901A;&#x8FC7; ansible &#x5E03;&#x7F72;&#x6253;&#x5370;&#x673A;-Chapter5</h2>
+
+<blockquote>
+<ul>
+<li>[ ] &#x521B;&#x5EFA;&#x5267;&#x672C;<code>printer-create.yml</code></li>
+<li>[ ] &#x5B89;&#x88C5;&#x6253;&#x5370;&#x673A;&#x4E3A;&#x9ED8;&#x8BA4;&#x6253;&#x5370;&#x673A;</li>
+<li>[ ] printer queue <code>new-printer</code></li>
+<li>[ ] URI&#x5730;&#x5740;<code>ipp://serverc:631/printers/rht-printer</code></li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment">#foundation</span>
+rht-vmctl start serverc
+<span class="token comment">#workstation</span>
+lab printing-automation start
+</pre><p><strong>[root@servera]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># yum provides lpadmin</span>
+<span class="token comment"># yum install cups avahi</span>
+
+<span class="token comment"># rpm -ql cups | grep service</span>
+/usr/lib/systemd/system/cups.service
+<span class="token comment"># systemctl enable --now cups.service</span>
+
+<span class="token comment"># rpm -ql avahi | grep service</span>
+/usr/lib/systemd/system/avahi-daemon.service
+
+<span class="token comment"># man lpadmin</span>
+lpadmin -p myprinter -E -v ipp://myprinter.local/ipp/print -m everywhere
+<span class="token comment"># lpadmin -p new-printer -E -v ipp://serverc:631/printers/rht-printer -m everywhere</span>
+ipp://serverc.lab.example.com:631/printers/rht-printer
+<span class="token comment"># lpadmin -d new-printer</span>
+
+<span class="token comment"># firewall-cmd --permanent --add-service=mdns</span>
+<span class="token comment"># firewall-cmd --reload</span>
+</pre><blockquote>
+<ul>
+<li>-p named printer</li>
+<li>-E Enables</li>
+<li><code>-v</code> URI</li>
+<li>-m model</li>
+<li><code>-d</code> default printer</li>
+</ul>
+</blockquote>
+<p><strong>[student@workstation]</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible-doc -l <span class="token operator">|</span> <span class="token function">grep</span> fire
+$ anisble-doc yum
+$ anisble-doc <span class="token function">service</span>
+$ anisble-doc firewalld
+$ ansible-doc <span class="token builtin class-name">command</span>
+/EX
+
+$ <span class="token builtin class-name">cd</span> printing-auto
+$ ansible --version
+$ <span class="token function">grep</span> ^inventory ansible.cfg
+
+$ <span class="token function">vim</span> printer-create.yml
+</pre><pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">---</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> print
+  <span class="token key atrule">hosts</span><span class="token punctuation">:</span> servera.lab.example.com
+  <span class="token key atrule">become</span><span class="token punctuation">:</span> yes
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> ensure a list of packages installed
+    <span class="token key atrule">yum</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">&quot;{{ packages }}&quot;</span>
+    <span class="token key atrule">vars</span><span class="token punctuation">:</span>
+      <span class="token key atrule">packages</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> cups
+      <span class="token punctuation">-</span> avahi
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Start service1<span class="token punctuation">,</span> if not started
+    <span class="token key atrule">service</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> cups
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> started
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> yes
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Start service2<span class="token punctuation">,</span> if not started
+    <span class="token key atrule">service</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> avahi<span class="token punctuation">-</span>daemon
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> started
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> yes
+  <span class="token punctuation">-</span> <span class="token key atrule">firewalld</span><span class="token punctuation">:</span>
+      <span class="token key atrule">service</span><span class="token punctuation">:</span> mdns
+      <span class="token key atrule">permanent</span><span class="token punctuation">:</span> yes
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> enabled
+      <span class="token key atrule">immediate</span><span class="token punctuation">:</span> yes
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> add printer
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> lpadmin <span class="token punctuation">-</span>p new<span class="token punctuation">-</span>printer <span class="token punctuation">-</span>E <span class="token punctuation">-</span>v ipp<span class="token punctuation">:</span>//serverc<span class="token punctuation">:</span>631/printers/rht<span class="token punctuation">-</span>printer <span class="token punctuation">-</span>m everywhere
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> set default print
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> lpadmin <span class="token punctuation">-</span>d new<span class="token punctuation">-</span>printer
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible-playbook printer-create.yml
+</pre><pre data-role="codeBlock" data-info="bash" class="language-bash">$ ansible servera.lab.example.com -a <span class="token string">&apos;lpstat -v&apos;</span>
+servera.lab.example.com <span class="token operator">|</span> CHANGED <span class="token operator">|</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span> <span class="token operator">&gt;&gt;</span>
+device <span class="token keyword keyword-for">for</span> new-printer: ipp://serverc:631/printers/rht-printer
+</pre><h1 class="mume-header" id="appendences">APPENDENCES</h1>
+
+<h2 class="mume-header" id="a1-%E7%BA%A2%E5%B8%BD%E8%AE%A4%E8%AF%81%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%93%E5%AE%B6%E8%80%83%E8%AF%95httpswwwredhatcomzhservicestrainingex358-red-hat-certified-specialist-services-management-automation-exam">A1. <a href="https://www.redhat.com/zh/services/training/ex358-red-hat-certified-specialist-services-management-automation-exam">&#x7EA2;&#x5E3D;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x548C;&#x81EA;&#x52A8;&#x5316;&#x4E13;&#x5BB6;&#x8003;&#x8BD5;</a></h2>
+
+<blockquote>
+<p>&#x6301;&#x7EED;&#x65F6;&#x95F4;	<strong>4.00 &#x5C0F;&#x65F6;</strong></p>
+</blockquote>
+<blockquote>
+<h3>&#x8003;&#x8BD5;&#x8981;&#x70B9;</h3>
+<p>&#x9664;&#x4E86;&#x4EE5;&#x4E0B;&#x6240;&#x5217;&#x76EE;&#x6807;&#x5916;&#xFF0C;&#x53C2;&#x52A0;&#x7EA2;&#x5E3D;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x548C;&#x81EA;&#x52A8;&#x5316;&#x4E13;&#x5BB6;&#x8003;&#x8BD5;&#x7684;&#x8003;&#x751F;&#x8FD8;&#x5E94;&#x53C2;&#x8003;&#x7EA2;&#x5E3D;&#x8BA4;&#x8BC1;&#x5DE5;&#x7A0B;&#x5E08;&#x8003;&#x8BD5;&#xFF08;RHCE&#xFF09;&#x7684;&#x8003;&#x8BD5;&#x76EE;&#x6807;&#xFF0C;&#x5E76;&#x5E94;&#x80FD;&#x591F;&#x80DC;&#x4EFB; RHCE &#x7EA7;&#x522B;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x56E0;&#x4E3A;&#x672C;&#x8003;&#x8BD5;&#x53EF;&#x80FD;&#x8981;&#x6C42;&#x8003;&#x751F;&#x638C;&#x63E1;&#x8FD9;&#x4E9B;&#x6280;&#x80FD;&#x3002;</p>
+<p>&#x53C2;&#x52A0;&#x7EA2;&#x5E3D;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x548C;&#x81EA;&#x52A8;&#x5316;&#x4E13;&#x5BB6;&#x8003;&#x8BD5;&#x7684;&#x8003;&#x751F;&#x5E94;&#x80FD;&#x591F;&#x72EC;&#x7ACB;&#x5B8C;&#x6210;&#x4E0B;&#x5217;&#x4EFB;&#x52A1;&#x3002;&#x8003;&#x751F;&#x5E94;&#x80FD;&#x591F;&#x624B;&#x52A8;&#x548C;&#x5229;&#x7528; Ansible &#x81EA;&#x52A8;&#x5316;&#x6267;&#x884C;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x3002;</p>
+<ul>
+<li>
+<p><strong>&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x670D;&#x52A1;</strong></p>
+<ul>
+<li>
+<p><code>&#x914D;&#x7F6E;&#x7F51;&#x7EDC;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4EE5;&#x4F7F;&#x7528;</code>&#x52A8;&#x6001;&#x6216;<code>&#x9759;&#x6001;&#x5206;&#x914D;&#x7684;&#x5730;&#x5740;</code></p>
+</li>
+<li>
+<p><code>&#x4F7F;&#x7528; IPv4 &#x548C; IPv6 &#x5DE5;&#x4F5C;</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406;&#x9632;&#x706B;&#x5899;&#x670D;&#x52A1;</strong></p>
+<ul>
+<li><code>&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x4EE5;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7279;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x6216;&#x7AEF;&#x53E3;</code></li>
+<li><code>&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x4EE5;&#x4EC5;&#x5141;&#x8BB8;&#x6216;&#x62D2;&#x7EDD;&#x6765;&#x81EA;&#x7279;&#x5B9A;&#x7F51;&#x57DF;&#x6216; IP &#x5B50;&#x7F51;&#x7684;&#x8BBF;&#x95EE;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; SELinux</strong></p>
+<ul>
+<li>&#x914D;&#x7F6E;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x7684; SELinux &#x5E03;&#x5C14;&#x503C;</li>
+<li><code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x7684; SELinux &#x4E0A;&#x4E0B;&#x6587;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;</strong></p>
+<ul>
+<li><code>&#x5C06;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x914D;&#x7F6E;&#x4E3A;&#x5728;&#x7CFB;&#x7EDF;&#x5F15;&#x5BFC;&#x65F6;&#x542F;&#x52A8;</code></li>
+<li>&#x963B;&#x6B62;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;</li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406;&#x94FE;&#x8DEF;&#x805A;&#x5408;</strong></p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x7531;&#x4E24;&#x4E2A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x6784;&#x6210;&#x7684;&#x7F51;&#x7EDC;&#x7EC4;&#x63A5;&#x53E3;</li>
+<li>&#x4F7F;&#x7F51;&#x7EDC;&#x7EC4;&#x63A5;&#x53E3;&#x5728;&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x540E;&#x4FDD;&#x6301;&#x6709;&#x6548;</li>
+<li>&#x4E3A;&#x7F51;&#x7EDC;&#x7EC4;&#x63A5;&#x53E3;&#x5206;&#x914D;&#x7F51;&#x7EDC;&#x5730;&#x5740;</li>
+<li>&#x914D;&#x7F6E; teamd &#x8FD0;&#x884C;&#x7A0B;&#x5E8F;</li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; DNS</strong></p>
+<ul>
+<li>&#x914D;&#x7F6E;&#x7F13;&#x5B58;&#x540D;&#x79F0;&#x670D;&#x52A1;&#x5668;</li>
+<li><code>&#x5229;&#x7528;&#x90E8;&#x5206;&#x5B8C;&#x6210;&#x7684;&#x533A;&#x57DF;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x6388;&#x6743;&#x57DF;&#x540D;&#x670D;&#x52A1;&#x5668;</code></li>
+<li><code>&#x914D;&#x7F6E; IPv4 &#x548C; IPv6 &#x5730;&#x5740;&#x6B63;&#x5411;&#x4E0E;&#x53CD;&#x5411;&#x67E5;&#x8BE2;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; DHCP</strong></p>
+<ul>
+<li><code>&#x914D;&#x7F6E;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x8303;&#x56F4;&#x5185;&#x7684;&#x5730;&#x5740;&#x5206;&#x914D;</code></li>
+<li><code>&#x5C06;&#x7279;&#x5B9A;&#x5730;&#x5740;&#x5206;&#x914D;&#x914D;&#x7F6E;&#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;</code></li>
+<li><code>&#x914D;&#x7F6E; IPv4</code> &#x548C; IPv6 <code>&#x5730;&#x5740;&#x5206;&#x914D;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406;&#x6253;&#x5370;&#x673A;</strong></p>
+<ul>
+<li><code>&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x6253;&#x5370;&#x673A;&#x7684;&#x6253;&#x5370;&#x673A;&#x961F;&#x5217;</code></li>
+<li>&#x7BA1;&#x7406;&#x73B0;&#x6709;&#x7684;&#x6253;&#x5370;&#x673A;&#x961F;&#x5217;</li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x670D;&#x52A1;</strong></p>
+<ul>
+<li>
+<p><code>&#x914D;&#x7F6E;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4EE5;&#x5C06;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x8F6C;&#x53D1;&#x5230;&#x51FA;&#x7AD9;&#x90AE;&#x4EF6;&#x4E2D;&#x7EE7;</code></p>
+</li>
+<li>
+<p><code>&#x4F7F;&#x7528;&#x90AE;&#x4EF6;&#x5BA2;&#x6237;&#x7AEF;&#x8BFB;&#x53D6;&#x6216;&#x53D1;&#x9001;&#x7535;&#x5B50;&#x90AE;&#x4EF6;</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; MariaDB &#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;</strong></p>
+<ul>
+<li><code>&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;&#x57FA;&#x672C;&#x7684; MariaDB &#x670D;&#x52A1;</code></li>
+<li><code>&#x5C06; MariaDB &#x670D;&#x52A1;&#x5668;&#x8BBF;&#x95EE;&#x9650;&#x5236;&#x5230;&#x7279;&#x5B9A;&#x7684;&#x7F51;&#x7EDC;&#x5730;&#x5740;</code></li>
+<li><code>&#x521B;&#x5EFA; MariaDB &#x6570;&#x636E;&#x5E93;</code></li>
+<li><code>&#x7BA1;&#x7406; MariaDB &#x6570;&#x636E;&#x5E93;&#x7528;&#x6237;&#x548C;&#x8BBF;&#x95EE;&#x6743;&#x9650;</code></li>
+<li>&#x6DFB;&#x52A0;&#x8BB0;&#x5F55;&#x5230;&#x73B0;&#x6709;&#x7684; MariaDB &#x6570;&#x636E;&#x5E93;</li>
+<li><code>&#x63D0;&#x4EA4;&#x5BF9; MariaDB &#x6570;&#x636E;&#x5E93;&#x7684;&#x7B80;&#x5355; SQL &#x67E5;&#x8BE2;</code></li>
+<li>&#x521B;&#x5EFA; MariaDB &#x5907;&#x4EFD;</li>
+<li><code>&#x4ECE;&#x5907;&#x4EFD;&#x5BFC;&#x5165; MariaDB &#x6570;&#x636E;&#x5E93;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; HTTPD Web &#x8BBF;&#x95EE;</strong></p>
+<ul>
+<li><code>&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E; Apache</code></li>
+<li><code>&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E; NGINX</code></li>
+<li><code>&#x914D;&#x7F6E;&#x66FF;&#x4EE3;&#x6587;&#x6863;&#x6839;&#x76EE;&#x5F55;</code></li>
+<li>&#x914D;&#x7F6E;&#x66FF;&#x4EE3; Web &#x8BBF;&#x95EE;&#x7AEF;&#x53E3;</li>
+<li><code>&#x914D;&#x7F6E;&#x57FA;&#x4E8E;&#x540D;&#x79F0;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;</code></li>
+<li><code>&#x914D;&#x7F6E;&#x5B89;&#x5168; Web &#x670D;&#x52A1;&#x5668;&#xFF08;HTTPS&#xFF09;</code></li>
+<li>&#x63D0;&#x4F9B;&#x9759;&#x6001;&#x7F13;&#x5B58;&#x4EE5;&#x7F29;&#x77ED; HTTP &#x54CD;&#x5E94;&#x65F6;&#x95F4;</li>
+<li>&#x914D;&#x7F6E; HTTP HAProxy &#x8D1F;&#x8F7D;&#x5E73;&#x8861;&#x5668;</li>
+<li>&#x7EC8;&#x6B62; HTTPS &#x8FDE;&#x63A5;</li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; iSCSI</strong></p>
+<ul>
+<li><code>&#x63D0;&#x4F9B;&#x548C;&#x914D;&#x7F6E; iSCSI &#x76EE;&#x6807;</code></li>
+<li><code>&#x914D;&#x7F6E; iSCSI &#x542F;&#x52A8;&#x5668;&#xFF0C;&#x4EE5;&#x6301;&#x4E45;&#x8FDE;&#x63A5; iSCSI &#x76EE;&#x6807;</code></li>
+<li><code>&#x5C06;&#x5BF9; iSCSI &#x670D;&#x52A1;&#x7684;&#x8BBF;&#x95EE;&#x9650;&#x5236;&#x5230;&#x7279;&#x5B9A;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x8BBF;&#x95EE;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; NFS</strong></p>
+<ul>
+<li><code>&#x914D;&#x7F6E;&#x6301;&#x4E45; NFS &#x5BFC;&#x51FA;</code></li>
+<li><code>&#x914D;&#x7F6E; NFS &#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4EE5;&#x6301;&#x4E45;&#x6302;&#x8F7D; NFS &#x5BFC;&#x51FA;</code></li>
+<li><code>&#x5C06;&#x5BF9; NFS &#x5BFC;&#x51FA;&#x7684;&#x8BBF;&#x95EE;&#x9650;&#x5236;&#x5230;&#x7279;&#x5B9A;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x7F51;&#x7EDC;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x7BA1;&#x7406; SMB</strong></p>
+<ul>
+<li><code>&#x914D;&#x7F6E; SMB &#x5171;&#x4EAB;</code></li>
+<li><code>&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406; SMB &#x7528;&#x6237;</code></li>
+<li><code>&#x521B;&#x5EFA;&#x4EC5;&#x9650; SMB &#x7528;&#x6237;</code></li>
+<li><code>&#x9650;&#x5236;&#x5BF9; SMB &#x5171;&#x4EAB;&#x7684;&#x8BBF;&#x95EE;</code></li>
+<li><code>&#x6302;&#x8F7D; SMB &#x5171;&#x4EAB;</code></li>
+<li><code>&#x6267;&#x884C;&#x591A;&#x7528;&#x6237; SMB &#x6302;&#x8F7D;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>&#x4F7F;&#x7528; Ansible &#x914D;&#x7F6E;&#x6807;&#x51C6;&#x670D;&#x52A1;</strong></p>
+<ul>
+<li><code>&#x521B;&#x5EFA;&#x548C;&#x4FEE;&#x6539; playbook</code></li>
+<li><code>&#x4E86;&#x89E3;&#x548C;&#x4F7F;&#x7528;&#x6E05;&#x5355;&#x6587;&#x4EF6;</code></li>
+<li><code>&#x5728; playbook &#x4E2D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;</code></li>
+<li><code>&#x4F7F;&#x7528; RHEL &#x7CFB;&#x7EDF;&#x89D2;&#x8272;</code></li>
+</ul>
+</li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x5B9E;&#x9645;&#x4EFB;&#x52A1;&#x64CD;&#x4F5C;&#x578B;&#x7684;&#x7EA2;&#x5E3D;&#x8003;&#x8BD5;&#xFF0C;&#x60A8;&#x7684;&#x6240;&#x6709;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x5FC5;&#x987B;&#x5728;&#x91CD;&#x542F;&#x540E;&#x4ECD;&#x7136;&#x6709;&#x6548;&#xFF08;&#x65E0;&#x9700;&#x4EBA;&#x5DE5;&#x5E72;&#x9884;&#xFF09;&#x3002;</p>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
