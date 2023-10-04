@@ -94,7 +94,7 @@ LAN
 >
 > Git项目 create_users 负责管理人员与硬件，使用以下信息来相应地更新项目存储库:
 >
->  - [ ] 可以点击http://git.lab.example.com:8081/git/create_users.git找到名为create_users的Git项目
+>  - [ ] 可以点击 http://git.lab.example.com:8081/git/create_users.git 找到名为create_users的Git项目
 >   - [ ] **create_users.yml** 是该项目使用的 playbook 的文件名
 >  - [ ] 在**developer**组中添加用户**greg**
 >   - [ ] 在**dev**主机组中增加**serverc**节点
