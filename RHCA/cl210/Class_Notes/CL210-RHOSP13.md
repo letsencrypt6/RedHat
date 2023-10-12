@@ -6,9 +6,9 @@
 
 **ORIENTATION TO THE CLASSROOM ENVIRONMENT**
 
-![cl210-classroom-architecture](https://k8s.ruitong.cn:8080/Redhat/CL210-RHOSP13.0-en-1-20200501/images/courseintro/cl210-classroom-architecture.svg)
+![cl210-classroom-architecture]([https://github.com/letsencrypt6/RedHat/blob/main/RH/images/courseintro/cl210-classroom-architecture.svg)
 
-
+https://github.com/letsencrypt6/RedHat/blob/main/RH/images/0.jpg
 
 # [1. 了解红帽 OpenStack 平台架构]()
 
@@ -17,7 +17,7 @@
 > - 描述容器化服务和管理命令
 > - 描述云上组件和管理架构的功能
 
-<img src='https://k8s.ruitong.cn:8080/Redhat/CL210-RHOSP13.0-en-1-20200501/images/architecture/architecture-deployment.png'>
+<img src='[https://github.com/letsencrypt6/RedHat/blob/main/RH/images/architecture/architecture-deployment.png'>
 
 **[kiosk@foundation0 ~]**
 
