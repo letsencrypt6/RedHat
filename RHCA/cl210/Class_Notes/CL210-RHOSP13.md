@@ -6,7 +6,7 @@
 
 **ORIENTATION TO THE CLASSROOM ENVIRONMENT**
 
-![cl210-classroom-architecture]([https://github.com/letsencrypt6/RedHat/blob/main/RH/images/courseintro/cl210-classroom-architecture.svg)
+![cl210-classroom-architecture]([https://github.com/letsencrypt6/RedHat/main/RH/images/courseintro/cl210-classroom-architecture.svg)
 
 https://github.com/letsencrypt6/RedHat/blob/main/RH/images/0.jpg
 
